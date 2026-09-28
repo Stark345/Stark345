@@ -1,0 +1,89 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 950 200" width="100%" height="100%">
+  <defs>
+    <linearGradient id="statsBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#02090D"/>
+      <stop offset="100%" stop-color="#041219"/>
+    </linearGradient>
+    <linearGradient id="cyanBar" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00FFCC"/>
+      <stop offset="100%" stop-color="#00E5FF"/>
+    </linearGradient>
+    <linearGradient id="purpleBar" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#A855F7"/>
+      <stop offset="100%" stop-color="#6366F1"/>
+    </linearGradient>
+    <linearGradient id="amberBar" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#FBBF24"/>
+      <stop offset="100%" stop-color="#F59E0B"/>
+    </linearGradient>
+  </defs>
+
+  <rect x="2" y="2" width="946" height="196" rx="8" fill="url(#statsBg)" stroke="#00E5FF" stroke-width="0.8" stroke-opacity="0.3"/>
+
+  <!-- Top Title -->
+  <g transform="translate(24, 22)">
+    <circle cx="0" cy="0" r="3.5" fill="#00FFCC"/>
+    <text x="12" y="4" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="700" fill="#00FFCC" letter-spacing="1">
+      GITHUB.ACTIVITY // LIVE COMMIT TELEMETRY &amp; CODE METRICS
+    </text>
+    <text x="760" y="4" font-family="'JetBrains Mono', monospace" font-size="9" fill="#64748B">SYNC: REAL-TIME</text>
+  </g>
+
+  <line x1="20" y1="36" x2="930" y2="36" stroke="#00E5FF" stroke-width="0.5" stroke-opacity="0.2"/>
+
+  <!-- LEFT PANEL: STATS BREAKDOWN (Matching Image 6, 7) -->
+  <g transform="translate(30, 52)">
+    <rect x="0" y="0" width="430" height="130" rx="6" fill="#01070A" stroke="#00E5FF" stroke-width="0.6" stroke-opacity="0.25"/>
+    <text x="16" y="22" font-family="'JetBrains Mono', monospace" font-size="10.5" font-weight="700" fill="#E2E8F0">
+      S. Jaichandran's GitHub Stats
+    </text>
+    <circle cx="410" cy="18" r="3" fill="#00FFCC"/>
+
+    <!-- Metrics rows -->
+    <g transform="translate(16, 46)">
+      <text x="0" y="0" font-family="'JetBrains Mono', monospace" font-size="10" fill="#64748B">Total Commits:</text>
+      <text x="200" y="0" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="700" fill="#00FFCC">314+</text>
+
+      <text x="0" y="22" font-family="'JetBrains Mono', monospace" font-size="10" fill="#64748B">Total Stars Earned:</text>
+      <text x="200" y="22" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="700" fill="#FBBF24">8★</text>
+
+      <text x="0" y="44" font-family="'JetBrains Mono', monospace" font-size="10" fill="#64748B">Production Repositories:</text>
+      <text x="200" y="44" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="700" fill="#38BDF8">6 Active</text>
+
+      <text x="0" y="66" font-family="'JetBrains Mono', monospace" font-size="10" fill="#64748B">Security / CI Audit:</text>
+      <text x="200" y="66" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="700" fill="#34D399">100% Grade A+</text>
+    </g>
+  </g>
+
+  <!-- RIGHT PANEL: MOST USED LANGUAGES (Matching Image 6, 7) -->
+  <g transform="translate(490, 52)">
+    <rect x="0" y="0" width="430" height="130" rx="6" fill="#01070A" stroke="#00E5FF" stroke-width="0.6" stroke-opacity="0.25"/>
+    <text x="16" y="22" font-family="'JetBrains Mono', monospace" font-size="10.5" font-weight="700" fill="#E2E8F0">
+      Most Used Languages &amp; Core Runtimes
+    </text>
+
+    <!-- Language 1: Python -->
+    <g transform="translate(16, 44)">
+      <text x="0" y="0" font-family="'JetBrains Mono', monospace" font-size="9.5" fill="#E2E8F0">Python (AI/ML &amp; Agents)</text>
+      <text x="350" y="0" text-anchor="end" font-family="'JetBrains Mono', monospace" font-size="9.5" font-weight="700" fill="#00FFCC">45%</text>
+      <rect x="0" y="6" width="350" height="4" rx="2" fill="#04202B"/>
+      <rect x="0" y="6" width="157" height="4" rx="2" fill="url(#cyanBar)"/>
+    </g>
+
+    <!-- Language 2: JavaScript / TypeScript -->
+    <g transform="translate(16, 72)">
+      <text x="0" y="0" font-family="'JetBrains Mono', monospace" font-size="9.5" fill="#E2E8F0">JavaScript / React.js / Node</text>
+      <text x="350" y="0" text-anchor="end" font-family="'JetBrains Mono', monospace" font-size="9.5" font-weight="700" fill="#A855F7">35%</text>
+      <rect x="0" y="6" width="350" height="4" rx="2" fill="#04202B"/>
+      <rect x="0" y="6" width="122" height="4" rx="2" fill="url(#purpleBar)"/>
+    </g>
+
+    <!-- Language 3: Java & C -->
+    <g transform="translate(16, 100)">
+      <text x="0" y="0" font-family="'JetBrains Mono', monospace" font-size="9.5" fill="#E2E8F0">Java &amp; Core Systems (C, SQL)</text>
+      <text x="350" y="0" text-anchor="end" font-family="'JetBrains Mono', monospace" font-size="9.5" font-weight="700" fill="#FBBF24">20%</text>
+      <rect x="0" y="6" width="350" height="4" rx="2" fill="#04202B"/>
+      <rect x="0" y="6" width="70" height="4" rx="2" fill="url(#amberBar)"/>
+    </g>
+  </g>
+</svg>

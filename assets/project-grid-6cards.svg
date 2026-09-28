@@ -18,7 +18,7 @@
     </linearGradient>
   </defs>
 
-  <!-- Top Terminal Command: S.LIST ./projects.sh --all (as in Image 6, 7, 8) -->
+  <!-- Top Terminal Command: S.LIST ./projects.sh ==all (as in Image 6, 7, 8) -->
   <g transform="translate(10, 22)">
     <text x="0" y="0" font-family="'JetBrains Mono', monospace" font-size="12" font-weight="700" fill="#00F0FF" letter-spacing="1">S.LIST</text>
     <text x="70" y="0" font-family="'JetBrains Mono', monospace" font-size="11" fill="#64748B">./projects.sh --all --featured-ai</text>
@@ -33,7 +33,7 @@
     <text x="16" y="24" font-family="'JetBrains Mono', monospace" font-size="9" fill="#0284C7">stark345/ai-hcp-crm-</text>
     <circle cx="435" cy="20" r="3" fill="#10B981"/>
 
-    <!-- Title & Desc -->
+    <!-- Title &amp; Desc -->
     <text x="16" y="52" font-family="'Segoe UI', sans-serif" font-size="17" font-weight="800" fill="#FFFFFF">AI-Powered HCP CRM_</text>
     <text x="16" y="72" font-family="'Segoe UI', sans-serif" font-size="11" fill="#94A3B8">Autonomous healthcare engagement platform with LLM tool calling</text>
 
@@ -77,7 +77,7 @@
     <text x="16" y="24" font-family="'JetBrains Mono', monospace" font-size="9" fill="#00F0FF">stark345/jarvis-arc-reactor_</text>
     <circle cx="435" cy="20" r="3" fill="#00F0FF"/>
 
-    <!-- Title & Desc with Real Arc Reactor Icon -->
+    <!-- Title &amp; Desc with Real Arc Reactor Icon -->
     <text x="16" y="52" font-family="'Segoe UI', sans-serif" font-size="17" font-weight="800" fill="#FFFFFF">JARVIS Arc Reactor Core_</text>
     <text x="16" y="72" font-family="'Segoe UI', sans-serif" font-size="11" fill="#94A3B8">Cyber-tech HUD telemetry &amp; autonomous agent runtime engine</text>
 
@@ -121,7 +121,7 @@
     <text x="16" y="24" font-family="'JetBrains Mono', monospace" font-size="9" fill="#0284C7">stark345/AI-Powered-Intrusion-Detection-System</text>
     <circle cx="435" cy="20" r="3" fill="#10B981"/>
 
-    <!-- Title & Desc -->
+    <!-- Title &amp; Desc -->
     <text x="16" y="52" font-family="'Segoe UI', sans-serif" font-size="17" font-weight="800" fill="#FFFFFF">AI Intrusion Detection System_</text>
     <text x="16" y="72" font-family="'Segoe UI', sans-serif" font-size="11" fill="#94A3B8">Hybrid CNN + LSTM deep network security framework with XAI</text>
 
@@ -162,7 +162,7 @@
     <text x="16" y="24" font-family="'JetBrains Mono', monospace" font-size="9" fill="#0284C7">stark345/Blood-cell-image-cancer-detection</text>
     <circle cx="435" cy="20" r="3" fill="#10B981"/>
 
-    <!-- Title & Desc -->
+    <!-- Title &amp; Desc -->
     <text x="16" y="52" font-family="'Segoe UI', sans-serif" font-size="17" font-weight="800" fill="#FFFFFF">Blood Cell Cancer Detection_</text>
     <text x="16" y="72" font-family="'Segoe UI', sans-serif" font-size="11" fill="#94A3B8">Microscopic blood smear computer vision classifier for leukemia</text>
 
@@ -205,7 +205,7 @@
     <text x="16" y="24" font-family="'JetBrains Mono', monospace" font-size="9" fill="#0284C7">stark345/ASJ-Pipe-Scaffolding-</text>
     <circle cx="435" cy="20" r="3" fill="#10B981"/>
 
-    <!-- Title & Desc -->
+    <!-- Title &amp; Desc -->
     <text x="16" y="52" font-family="'Segoe UI', sans-serif" font-size="17" font-weight="800" fill="#FFFFFF">ASJ Scaffolding Portal_</text>
     <text x="16" y="72" font-family="'Segoe UI', sans-serif" font-size="11" fill="#94A3B8">Commercial engineering site with security headers &amp; SEO architecture</text>
 
@@ -246,7 +246,7 @@
     <text x="16" y="24" font-family="'JetBrains Mono', monospace" font-size="9" fill="#0284C7">stark345/interactive-birthday-webpage</text>
     <circle cx="435" cy="20" r="3" fill="#10B981"/>
 
-    <!-- Title & Desc -->
+    <!-- Title &amp; Desc -->
     <text x="16" y="52" font-family="'Segoe UI', sans-serif" font-size="17" font-weight="800" fill="#FFFFFF">Interactive Web Portal_</text>
     <text x="16" y="72" font-family="'Segoe UI', sans-serif" font-size="11" fill="#94A3B8">6-multiverse portal with HTML5 canvas particles, 3D physics &amp; audio</text>
 

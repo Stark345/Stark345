@@ -1,0 +1,309 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 950 480" width="100%" height="100%">
+  <defs>
+    <!-- Background Gradient (Matching Image 5) -->
+    <linearGradient id="hudBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#01070A"/>
+      <stop offset="50%" stop-color="#020E13"/>
+      <stop offset="100%" stop-color="#01080B"/>
+    </linearGradient>
+
+    <!-- Card Background -->
+    <linearGradient id="cardGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#03141B"/>
+      <stop offset="100%" stop-color="#020C11"/>
+    </linearGradient>
+
+    <!-- Glowing Core Filters -->
+    <filter id="coreGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="12" result="blur1"/>
+      <feGaussianBlur stdDeviation="5" result="blur2"/>
+      <feMerge>
+        <feMergeNode in="blur1"/>
+        <feMergeNode in="blur2"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <filter id="subtleGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="2.5" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <style>
+    @keyframes spinOrbit1 {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+    @keyframes spinOrbit2 {
+      0% { transform: rotate(360deg); }
+      100% { transform: rotate(0deg); }
+    }
+    @keyframes pulseOrb {
+      0%, 100% { transform: scale(1); opacity: 0.9; }
+      50% { transform: scale(1.05); opacity: 1; filter: drop-shadow(0 0 16px #00FFCC); }
+    }
+    @keyframes blinkDot {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.3; }
+    }
+    @keyframes typingText {
+      0%, 49% { opacity: 1; }
+      50%, 100% { opacity: 0; }
+    }
+    .orbit-ring-1 {
+      transform-origin: 475px 270px;
+      animation: spinOrbit1 20s linear infinite;
+    }
+    .orbit-ring-2 {
+      transform-origin: 475px 270px;
+      animation: spinOrbit2 14s linear infinite;
+    }
+    .orb-center {
+      transform-origin: 475px 270px;
+      animation: pulseOrb 3.5s ease-in-out infinite;
+    }
+    .cyan-dot {
+      animation: blinkDot 2s ease-in-out infinite;
+    }
+    .cursor-blink {
+      animation: typingText 0.9s infinite;
+    }
+  </style>
+
+  <!-- ==================== 1. MAIN WINDOW CONTAINER ==================== -->
+  <rect x="2" y="2" width="946" height="476" rx="8" fill="url(#hudBg)" stroke="#00E5FF" stroke-width="1" stroke-opacity="0.3"/>
+
+  <!-- ==================== 2. TOP BAR (Matching Image 5) ==================== -->
+  <g transform="translate(16, 20)">
+    <!-- Left: Target Icon & J.A.R.V.I.S. HUD v2 -->
+    <circle cx="6" cy="0" r="5" fill="none" stroke="#00FFCC" stroke-width="1.2"/>
+    <circle cx="6" cy="0" r="2" fill="#00FFCC"/>
+    <text x="20" y="4" font-family="'Orbitron', 'Segoe UI', monospace" font-size="11" font-weight="700" fill="#00FFCC" letter-spacing="1.5">
+      J.A.R.V.I.S. HUD v2
+    </text>
+
+    <!-- Center: Clock -->
+    <text x="460" y="4" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="13" font-weight="700" fill="#E2E8F0" letter-spacing="2">
+      18:39:04
+    </text>
+
+    <!-- Right: Window Controls -->
+    <g transform="translate(870, 0)">
+      <line x1="-30" y1="0" x2="-20" y2="0" stroke="#64748B" stroke-width="1.5"/>
+      <rect x="-10" y="-5" width="9" height="9" fill="none" stroke="#64748B" stroke-width="1.2"/>
+      <line x1="8" y1="-4" x2="16" y2="4" stroke="#64748B" stroke-width="1.5"/>
+      <line x1="16" y1="-4" x2="8" y2="4" stroke="#64748B" stroke-width="1.5"/>
+    </g>
+  </g>
+
+  <!-- Divider Line -->
+  <line x1="16" y1="36" x2="934" y2="36" stroke="#00E5FF" stroke-width="0.75" stroke-opacity="0.2"/>
+
+  <!-- ==================== 3. LEFT COLUMN CARDS (Matching Image 5) ==================== -->
+
+  <!-- Card 1: CLOCK -->
+  <g transform="translate(30, 60)">
+    <rect x="0" y="0" width="180" height="90" rx="8" fill="url(#cardGrad)" stroke="#00E5FF" stroke-width="0.8" stroke-opacity="0.35"/>
+    <text x="14" y="22" font-family="'JetBrains Mono', monospace" font-size="9" font-weight="600" fill="#64748B" letter-spacing="1.5">CLOCK</text>
+    <circle cx="166" cy="18" r="3" fill="#00FFCC" class="cyan-dot"/>
+
+    <text x="14" y="52" font-family="'Orbitron', 'Segoe UI', monospace" font-size="20" font-weight="800" fill="#F8FAFC">18:39:04</text>
+    <text x="14" y="68" font-family="'JetBrains Mono', monospace" font-size="8.5" fill="#64748B" letter-spacing="0.5">SEPTEMBER 28, 2026</text>
+    <text x="14" y="80" font-family="'JetBrains Mono', monospace" font-size="8.5" font-weight="700" fill="#00FFCC" letter-spacing="0.5">MONDAY // ONLINE</text>
+  </g>
+
+  <!-- Card 2: CORE LOAD -->
+  <g transform="translate(30, 165)">
+    <rect x="0" y="0" width="180" height="90" rx="8" fill="url(#cardGrad)" stroke="#00E5FF" stroke-width="0.8" stroke-opacity="0.35"/>
+    <text x="14" y="22" font-family="'JetBrains Mono', monospace" font-size="9" font-weight="600" fill="#64748B" letter-spacing="1.5">CORE LOAD</text>
+    <circle cx="166" cy="18" r="3" fill="#00FFCC" class="cyan-dot"/>
+
+    <text x="14" y="52" font-family="'Orbitron', 'Segoe UI', monospace" font-size="22" font-weight="800" fill="#F8FAFC">32<tspan font-size="12" fill="#00FFCC">%</tspan></text>
+    
+    <!-- Sleek Progress Bar (Matching Image 5) -->
+    <rect x="14" y="66" width="152" height="4" rx="2" fill="#04202B"/>
+    <rect x="14" y="66" width="50" height="4" rx="2" fill="#00FFCC" filter="url(#subtleGlow)"/>
+  </g>
+
+  <!-- Card 3: NETWORK -->
+  <g transform="translate(30, 270)">
+    <rect x="0" y="0" width="180" height="90" rx="8" fill="url(#cardGrad)" stroke="#00E5FF" stroke-width="0.8" stroke-opacity="0.35"/>
+    <text x="14" y="22" font-family="'JetBrains Mono', monospace" font-size="9" font-weight="600" fill="#64748B" letter-spacing="1.5">NETWORK</text>
+    <circle cx="166" cy="18" r="3" fill="#00FFCC" class="cyan-dot"/>
+
+    <!-- Speed Icon + Value -->
+    <g transform="translate(14, 38)">
+      <rect x="0" y="2" width="12" height="12" rx="2" fill="none" stroke="#00FFCC" stroke-width="1.2"/>
+      <line x1="2" y1="12" x2="10" y2="4" stroke="#00FFCC" stroke-width="1.2"/>
+      <text x="20" y="14" font-family="'Orbitron', 'Segoe UI', monospace" font-size="16" font-weight="800" fill="#F8FAFC">0 <tspan font-size="10" fill="#64748B">mb/s</tspan></text>
+    </g>
+    <text x="14" y="76" font-family="'JetBrains Mono', monospace" font-size="8.5" fill="#38BDF8">PING: 12ms // STABLE</text>
+  </g>
+
+  <!-- Card 4: DEVELOPER IDENTITY BADGE (Bonus matching theme) -->
+  <g transform="translate(30, 375)">
+    <rect x="0" y="0" width="180" height="80" rx="8" fill="url(#cardGrad)" stroke="#00E5FF" stroke-width="0.8" stroke-opacity="0.35"/>
+    <text x="14" y="20" font-family="'JetBrains Mono', monospace" font-size="8.5" fill="#64748B">OPERATOR</text>
+    <text x="14" y="38" font-family="'Segoe UI', sans-serif" font-size="12" font-weight="800" fill="#FFFFFF">S. JAICHANDRAN</text>
+    <text x="14" y="54" font-family="'JetBrains Mono', monospace" font-size="8" font-weight="600" fill="#00FFCC">AI FULL STACK DEV</text>
+    <text x="14" y="68" font-family="'JetBrains Mono', monospace" font-size="8" fill="#38BDF8">B.TECH IT (HONORS)</text>
+  </g>
+
+  <!-- ==================== 4. CENTERPIECE: J.A.R.V.I.S. ORB (Matching Image 5) ==================== -->
+  
+  <!-- Center Headers -->
+  <text x="475" y="90" text-anchor="middle" font-family="'Orbitron', 'Segoe UI', sans-serif" font-size="20" font-weight="900" fill="#FFFFFF" letter-spacing="9">
+    J . A . R . V . I . S .
+  </text>
+  <text x="475" y="112" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="9" font-weight="600" fill="#00FFCC" letter-spacing="3">
+    SYSTEM ONLINE - AWAITING INPUT
+  </text>
+
+  <!-- Central Glowing Holographic Orb Assembly -->
+  <g transform="translate(0, 0)">
+    
+    <!-- Outer Deep Glow Sphere -->
+    <circle cx="475" cy="270" r="85" fill="#013B3F" fill-opacity="0.25" filter="url(#coreGlow)"/>
+    
+    <!-- Inner Luminous Spherical Core -->
+    <circle cx="475" cy="270" r="50" fill="#024E54" fill-opacity="0.6" filter="url(#coreGlow)"/>
+    <circle cx="475" cy="270" r="38" fill="#046C74" fill-opacity="0.8" filter="url(#subtleGlow)"/>
+
+    <!-- Concentric Nested Sacred Geometric Overlapping Rings (As in Image 5) -->
+    <g class="orb-center">
+      <circle cx="475" cy="270" r="16" fill="none" stroke="#00FFCC" stroke-width="0.8"/>
+      <circle cx="467" cy="270" r="16" fill="none" stroke="#00FFCC" stroke-width="0.8"/>
+      <circle cx="483" cy="270" r="16" fill="none" stroke="#00FFCC" stroke-width="0.8"/>
+      <circle cx="475" cy="262" r="16" fill="none" stroke="#00FFCC" stroke-width="0.8"/>
+      <circle cx="475" cy="278" r="16" fill="none" stroke="#00FFCC" stroke-width="0.8"/>
+      <circle cx="475" cy="270" r="4" fill="#FFFFFF"/>
+    </g>
+
+    <!-- Orbital Particle Clouds - Ring 1 (Clockwise) -->
+    <g class="orbit-ring-1">
+      <!-- 40 fine orbital micro-dots -->
+      <circle cx="475" cy="165" r="1.5" fill="#00FFCC"/>
+      <circle cx="515" cy="172" r="2" fill="#00FFCC"/>
+      <circle cx="545" cy="190" r="1.5" fill="#00E5FF"/>
+      <circle cx="568" cy="220" r="2.2" fill="#00FFCC"/>
+      <circle cx="575" cy="255" r="1.8" fill="#00FFCC"/>
+      <circle cx="568" cy="290" r="2" fill="#38BDF8"/>
+      <circle cx="548" cy="325" r="1.5" fill="#00FFCC"/>
+      <circle cx="515" cy="355" r="2" fill="#00FFCC"/>
+      <circle cx="475" cy="370" r="1.8" fill="#00E5FF"/>
+      <circle cx="435" cy="360" r="1.5" fill="#00FFCC"/>
+      <circle cx="400" cy="330" r="2" fill="#00FFCC"/>
+      <circle cx="380" cy="295" r="1.8" fill="#38BDF8"/>
+      <circle cx="372" cy="260" r="2.2" fill="#00FFCC"/>
+      <circle cx="380" cy="220" r="1.5" fill="#00FFCC"/>
+      <circle cx="405" cy="188" r="2" fill="#00E5FF"/>
+      <circle cx="440" cy="170" r="1.8" fill="#00FFCC"/>
+
+      <!-- Extra cloud cluster dots -->
+      <circle cx="530" cy="180" r="1" fill="#00FFCC"/>
+      <circle cx="558" cy="205" r="1" fill="#00FFCC"/>
+      <circle cx="572" cy="240" r="1.2" fill="#00FFCC"/>
+      <circle cx="572" cy="275" r="1.2" fill="#00FFCC"/>
+      <circle cx="555" cy="310" r="1" fill="#00FFCC"/>
+      <circle cx="425" cy="365" r="1.2" fill="#00FFCC"/>
+      <circle cx="390" cy="315" r="1" fill="#00FFCC"/>
+      <circle cx="375" cy="245" r="1.2" fill="#00FFCC"/>
+      <circle cx="392" cy="202" r="1" fill="#00FFCC"/>
+    </g>
+
+    <!-- Orbital Particle Clouds - Ring 2 (Counter-Clockwise Outer) -->
+    <g class="orbit-ring-2">
+      <circle cx="475" cy="140" r="1.8" fill="#00FFCC"/>
+      <circle cx="540" cy="155" r="1.5" fill="#00FFCC"/>
+      <circle cx="585" cy="195" r="2" fill="#00E5FF"/>
+      <circle cx="605" cy="250" r="2.2" fill="#00FFCC"/>
+      <circle cx="590" cy="315" r="1.8" fill="#00FFCC"/>
+      <circle cx="545" cy="365" r="2" fill="#38BDF8"/>
+      <circle cx="475" cy="390" r="1.8" fill="#00FFCC"/>
+      <circle cx="405" cy="370" r="1.5" fill="#00FFCC"/>
+      <circle cx="360" cy="320" r="2" fill="#00FFCC"/>
+      <circle cx="342" cy="260" r="2.2" fill="#00E5FF"/>
+      <circle cx="355" cy="200" r="1.8" fill="#00FFCC"/>
+      <circle cx="405" cy="155" r="2" fill="#38BDF8"/>
+
+      <circle cx="510" cy="146" r="1" fill="#00FFCC"/>
+      <circle cx="565" cy="172" r="1.2" fill="#00FFCC"/>
+      <circle cx="600" cy="220" r="1" fill="#00FFCC"/>
+      <circle cx="602" cy="285" r="1" fill="#00FFCC"/>
+      <circle cx="570" cy="342" r="1.2" fill="#00FFCC"/>
+      <circle cx="512" cy="380" r="1" fill="#00FFCC"/>
+      <circle cx="440" cy="385" r="1" fill="#00FFCC"/>
+      <circle cx="378" cy="348" r="1.2" fill="#00FFCC"/>
+      <circle cx="348" cy="290" r="1" fill="#00FFCC"/>
+      <circle cx="346" cy="230" r="1.2" fill="#00FFCC"/>
+      <circle cx="375" cy="175" r="1" fill="#00FFCC"/>
+      <circle cx="440" cy="144" r="1.2" fill="#00FFCC"/>
+    </g>
+
+  </g>
+
+  <!-- ==================== 5. RIGHT COLUMN: JARVIS CHAT (Matching Image 5) ==================== -->
+  <g transform="translate(730, 48)">
+    <!-- Right Panel Outline -->
+    <line x1="0" y1="0" x2="0" y2="420" stroke="#00E5FF" stroke-width="0.75" stroke-opacity="0.2"/>
+
+    <!-- Header: JARVIS CHAT -->
+    <g transform="translate(18, 16)">
+      <text x="0" y="0" font-family="'Orbitron', monospace" font-size="10.5" font-weight="700" fill="#00FFCC" letter-spacing="1.5">
+        JARVIS CHAT
+      </text>
+      <!-- Controls -->
+      <line x1="140" y1="-4" x2="148" y2="-4" stroke="#64748B" stroke-width="1.2"/>
+      <rect x="156" y="-8" width="8" height="8" fill="none" stroke="#64748B" stroke-width="1"/>
+      <line x1="172" y1="-8" x2="178" y2="-2" stroke="#64748B" stroke-width="1.2"/>
+      <line x1="178" y1="-8" x2="172" y2="-2" stroke="#64748B" stroke-width="1.2"/>
+    </g>
+
+    <line x1="18" y1="28" x2="204" y2="28" stroke="#00E5FF" stroke-width="0.5" stroke-opacity="0.2"/>
+
+    <!-- Chat Message 1 -->
+    <g transform="translate(18, 48)">
+      <text x="0" y="0" font-family="'JetBrains Mono', monospace" font-size="9" font-weight="700" fill="#00FFCC">JARVIS</text>
+      <text x="140" y="0" font-family="'JetBrains Mono', monospace" font-size="8" fill="#64748B">6:39 PM</text>
+
+      <!-- Chat Bubble -->
+      <rect x="0" y="10" width="186" height="58" rx="6" fill="#02141A" stroke="#00E5FF" stroke-width="0.6" stroke-opacity="0.3"/>
+      <text x="10" y="28" font-family="'Segoe UI', sans-serif" font-size="9.5" fill="#E2E8F0">All systems operational.</text>
+      <text x="10" y="44" font-family="'Segoe UI', sans-serif" font-size="9.5" fill="#E2E8F0">How can I assist you today?</text>
+      <!-- Verified check -->
+      <text x="168" y="60" font-size="8" fill="#00FFCC">✓</text>
+    </g>
+
+    <!-- Chat Message 2 (Developer Context) -->
+    <g transform="translate(18, 134)">
+      <text x="0" y="0" font-family="'JetBrains Mono', monospace" font-size="9" font-weight="700" fill="#00FFCC">CORE SPEC</text>
+      <text x="140" y="0" font-family="'JetBrains Mono', monospace" font-size="8" fill="#64748B">SYSTEM</text>
+
+      <rect x="0" y="10" width="186" height="120" rx="6" fill="#02141A" stroke="#00E5FF" stroke-width="0.6" stroke-opacity="0.3"/>
+      <text x="10" y="28" font-family="'Segoe UI', sans-serif" font-size="9.5" font-weight="700" fill="#00FFCC">S. Jaichandran</text>
+      <text x="10" y="44" font-family="'Segoe UI', sans-serif" font-size="9" fill="#94A3B8">• Full Stack + AI Specialist</text>
+      <text x="10" y="60" font-family="'Segoe UI', sans-serif" font-size="9" fill="#94A3B8">• React, Node.js, Python, Java</text>
+      <text x="10" y="76" font-family="'Segoe UI', sans-serif" font-size="9" fill="#94A3B8">• Autonomous Agents &amp; RAG</text>
+      <text x="10" y="92" font-family="'Segoe UI', sans-serif" font-size="9" fill="#94A3B8">• 3 Production AI Systems</text>
+      <text x="10" y="112" font-family="'JetBrains Mono', monospace" font-size="8.5" font-weight="700" fill="#34D399">STATUS: OPEN FOR WORK</text>
+    </g>
+
+    <!-- Bottom Input Bar (Matching Image 5) -->
+    <g transform="translate(18, 380)">
+      <rect x="0" y="0" width="150" height="32" rx="16" fill="#021217" stroke="#00E5FF" stroke-width="0.8" stroke-opacity="0.3"/>
+      <text x="14" y="20" font-family="'Segoe UI', sans-serif" font-size="9.5" fill="#64748B">
+        Ask me anything...
+      </text>
+      <rect x="110" y="11" width="1.5" height="11" fill="#00FFCC" class="cursor-blink"/>
+
+      <!-- Send Button -->
+      <circle cx="170" cy="16" r="15" fill="#00FFCC"/>
+      <polygon points="166,10 176,16 166,22 168,16" fill="#010A0D"/>
+    </g>
+  </g>
+
+</svg>
