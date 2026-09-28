@@ -1,0 +1,88 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 100" width="100%" height="auto">
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="50%" r="60%">
+      <stop offset="0%"  stop-color="#06201c"/>
+      <stop offset="100%" stop-color="#020705"/>
+    </radialGradient>
+    <radialGradient id="orbG" cx="40%" cy="34%" r="65%">
+      <stop offset="0%"  stop-color="#bdfff2"/>
+      <stop offset="26%" stop-color="#29c9ad"/>
+      <stop offset="58%" stop-color="#0d5e51"/>
+      <stop offset="82%" stop-color="#041e19"/>
+    </radialGradient>
+    <filter id="g" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="2.5" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <style>
+    @keyframes dp { 0%,100%{opacity:1;} 50%{opacity:0.2;} }
+    @keyframes hov { 0%,100%{filter:drop-shadow(0 0 4px #2fe6cf55);} 50%{filter:drop-shadow(0 0 10px #2fe6cf);} }
+    .fm { font-family:'Share Tech Mono','Courier New',monospace; }
+  </style>
+
+  <rect width="960" height="100" fill="url(#bg)"/>
+  <line x1="0" y1="0.5" x2="960" y2="0.5" stroke="#2fe6cf" stroke-width="0.5" opacity="0.22"/>
+  <line x1="0" y1="99" x2="960" y2="99" stroke="#2fe6cf" stroke-width="0.5" opacity="0.22"/>
+
+  <text x="20" y="22" class="fm" font-size="9" fill="#5fa89c" letter-spacing="2">SYSTEM.CONNECTIONS // ESTABLISH UPLINK</text>
+  <line x1="20" y1="28" x2="940" y2="28" stroke="#2fe6cf" stroke-width="0.3" opacity="0.22"/>
+
+  <!-- Small arc reactor -->
+  <g transform="translate(30,62)">
+    <circle cx="0" cy="0" r="18" fill="none" stroke="#2fe6cf" stroke-width="0.8" stroke-dasharray="4 6" opacity="0.6"/>
+    <circle cx="0" cy="0" r="11" fill="none" stroke="#ffb347" stroke-width="1" stroke-dasharray="8 4" opacity="0.7"/>
+    <circle cx="0" cy="0" r="6"  fill="url(#orbG)" style="filter:drop-shadow(0 0 8px #2fe6cf55);"/>
+    <polygon points="0,-4 -3,3 3,3" fill="none" stroke="#2fe6cf" stroke-width="0.9" opacity="0.9"/>
+  </g>
+
+  <!-- Connection buttons -->
+  <!-- PORTFOLIO -->
+  <a href="https://sjaichandran-portfolio.netlify.app/" target="_blank">
+    <rect x="72" y="42" width="140" height="38" rx="6" fill="#061a18"
+          stroke="#2fe6cf" stroke-width="1" stroke-opacity="0.6"
+          style="animation:hov 3s ease-in-out infinite;"/>
+    <polyline points="72,52 72,42 82,42" fill="none" stroke="#2fe6cf" stroke-width="1.5"/>
+    <polyline points="202,42 212,42 212,52" fill="none" stroke="#2fe6cf" stroke-width="1.5"/>
+    <text x="142" y="59" text-anchor="middle" class="fm" font-size="7" fill="#5fa89c" letter-spacing="2">PORTFOLIO</text>
+    <text x="142" y="72" text-anchor="middle" class="fm" font-size="9" fill="#2fe6cf">OPEN LINK ↗</text>
+  </a>
+
+  <!-- EMAIL -->
+  <a href="mailto:jaichandran20871@gmail.com">
+    <rect x="228" y="42" width="212" height="38" rx="6" fill="#061a18"
+          stroke="#2fe6cf" stroke-width="1" stroke-opacity="0.6"
+          style="animation:hov 3s ease-in-out 0.6s infinite;"/>
+    <polyline points="228,52 228,42 238,42" fill="none" stroke="#2fe6cf" stroke-width="1.5"/>
+    <polyline points="430,42 440,42 440,52" fill="none" stroke="#2fe6cf" stroke-width="1.5"/>
+    <text x="334" y="59" text-anchor="middle" class="fm" font-size="7" fill="#5fa89c" letter-spacing="2">DIRECT MESSAGE</text>
+    <text x="334" y="72" text-anchor="middle" class="fm" font-size="9" fill="#2fe6cf">jaichandran20871@gmail.com</text>
+  </a>
+
+  <!-- GITHUB -->
+  <a href="https://github.com/Stark345" target="_blank">
+    <rect x="458" y="42" width="160" height="38" rx="6" fill="#061a18"
+          stroke="#2fe6cf" stroke-width="1" stroke-opacity="0.6"
+          style="animation:hov 3s ease-in-out 1.2s infinite;"/>
+    <polyline points="458,52 458,42 468,42" fill="none" stroke="#2fe6cf" stroke-width="1.5"/>
+    <polyline points="608,42 618,42 618,52" fill="none" stroke="#2fe6cf" stroke-width="1.5"/>
+    <text x="538" y="59" text-anchor="middle" class="fm" font-size="7" fill="#5fa89c" letter-spacing="2">GITHUB</text>
+    <text x="538" y="72" text-anchor="middle" class="fm" font-size="9" fill="#2fe6cf">github.com/Stark345</text>
+  </a>
+
+  <!-- LINKEDIN placeholder -->
+  <rect x="634" y="42" width="140" height="38" rx="6" fill="#061a18"
+        stroke="#2fe6cf" stroke-width="0.5" stroke-opacity="0.3"/>
+  <text x="704" y="59" text-anchor="middle" class="fm" font-size="7" fill="#5fa89c" letter-spacing="2">LINKEDIN</text>
+  <text x="704" y="72" text-anchor="middle" class="fm" font-size="9" fill="#5fa89c">UPLINK PENDING</text>
+
+  <!-- Right status blip -->
+  <circle cx="900" cy="62" r="5" fill="#00ff88"
+          style="filter:drop-shadow(0 0 8px #00ff88);animation:dp 1.8s ease-in-out infinite;"/>
+  <text x="912" y="65" class="fm" font-size="9" fill="#00ff88">LIVE</text>
+
+  <!-- Footer -->
+  <text x="480" y="93" text-anchor="middle" class="fm" font-size="7" fill="#5fa89c" letter-spacing="1">
+    STARK CORE v3.0 // S. JAICHANDRAN // JARVIS ARCHITECTURE // CHENNAI, INDIA
+  </text>
+</svg>
