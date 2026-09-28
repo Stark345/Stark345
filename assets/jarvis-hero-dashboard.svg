@@ -1,478 +1,455 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 540" width="100%" height="auto">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 560" width="100%" height="auto">
   <defs>
-    <!-- Exact JARVIS body background from style.css line 35 -->
-    <radialGradient id="bodyBg" cx="50%" cy="42%" r="60%">
+    <!-- JARVIS exact background: radial-gradient ellipse #06201c → #030f0d → #020705 -->
+    <radialGradient id="bg" cx="50%" cy="42%" r="65%">
       <stop offset="0%"   stop-color="#06201c"/>
       <stop offset="45%"  stop-color="#030f0d"/>
       <stop offset="100%" stop-color="#020705"/>
     </radialGradient>
 
-    <!-- Panel glass: rgba(6,26,24,0.55) -->
-    <linearGradient id="panelFill" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%"   stop-color="#061a18" stop-opacity="0.7"/>
-      <stop offset="100%" stop-color="#030e0c" stop-opacity="0.7"/>
+    <!-- Glass panel: rgba(6,26,24,0.55) -->
+    <linearGradient id="glass" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%"   stop-color="#061a18" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#030e0c" stop-opacity="0.6"/>
     </linearGradient>
 
-    <!-- Arc reactor / orb core: #bdfff2 → #29c9ad → #0d5e51 → #041e19 -->
-    <radialGradient id="orbGrad" cx="40%" cy="34%" r="65%">
+    <!-- Orb gradient: exact from style.css .orb -->
+    <radialGradient id="orb" cx="40%" cy="34%" r="65%">
       <stop offset="0%"   stop-color="#bdfff2"/>
       <stop offset="26%"  stop-color="#29c9ad"/>
       <stop offset="58%"  stop-color="#0d5e51"/>
       <stop offset="82%"  stop-color="#041e19"/>
       <stop offset="100%" stop-color="#010b09"/>
     </radialGradient>
-    <radialGradient id="orbShine" cx="40%" cy="34%" r="20%">
+    <radialGradient id="orbShine" cx="38%" cy="32%" r="22%">
       <stop offset="0%"   stop-color="#ffffff" stop-opacity="0.35"/>
       <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
     </radialGradient>
 
+    <!-- Portrait clip -->
+    <clipPath id="portraitClip">
+      <rect x="22" y="52" width="196" height="206" rx="3"/>
+    </clipPath>
+
     <!-- Glow filters -->
-    <filter id="tealGlow" x="-40%" y="-40%" width="180%" height="180%">
-      <feGaussianBlur stdDeviation="4" result="b"/>
+    <filter id="g2" x="-25%" y="-25%" width="150%" height="150%">
+      <feGaussianBlur stdDeviation="2.5" result="b"/>
       <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
     </filter>
-    <filter id="tealGlowStrong" x="-80%" y="-80%" width="260%" height="260%">
-      <feGaussianBlur stdDeviation="10" result="b1"/>
-      <feGaussianBlur stdDeviation="5"  result="b2"/>
-      <feMerge><feMergeNode in="b1"/><feMergeNode in="b2"/><feMergeNode in="SourceGraphic"/></feMerge>
+    <filter id="g6" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="6" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
     </filter>
-    <filter id="orbGlow" x="-60%" y="-60%" width="220%" height="220%">
+    <filter id="g14" x="-70%" y="-70%" width="240%" height="240%">
       <feGaussianBlur stdDeviation="14" result="b"/>
       <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
     </filter>
 
-    <!-- Dot grid pattern matching style.css body::before -->
+    <!-- Dot grid pattern (body::before from style.css) -->
     <pattern id="dotGrid" x="0" y="0" width="5" height="5" patternUnits="userSpaceOnUse">
       <circle cx="0.5" cy="0.5" r="0.5" fill="#2fe6cf" opacity="0.05"/>
     </pattern>
-    <radialGradient id="dotMask" cx="50%" cy="50%" r="50%">
-      <stop offset="0%"   stop-color="white" stop-opacity="1"/>
-      <stop offset="75%"  stop-color="white" stop-opacity="0.3"/>
+    <radialGradient id="gridFade" cx="50%" cy="50%" r="55%">
+      <stop offset="0%"   stop-color="white"/>
+      <stop offset="70%"  stop-color="white" stop-opacity="0.4"/>
       <stop offset="100%" stop-color="white" stop-opacity="0"/>
     </radialGradient>
-    <mask id="gridMask">
-      <rect width="960" height="540" fill="url(#dotMask)"/>
-    </mask>
-
-    <!-- Clip for portrait -->
-    <clipPath id="portraitClip">
-      <rect x="26" y="78" width="178" height="148" rx="3"/>
-    </clipPath>
+    <mask id="gm"><rect width="960" height="560" fill="url(#gridFade)"/></mask>
   </defs>
 
   <style>
-    /* ── JARVIS exact animations ───────── */
+    /* Exact animations from script.js / style.css */
     @keyframes idlePulse {
-      0%,100% { transform: scale(1);     }
-      50%      { transform: scale(1.035); }
+      0%,100% { transform:scale(1); }
+      50%      { transform:scale(1.035); }
     }
-    @keyframes orbSpin {
-      to { transform: rotate(360deg); }
+    /* Organic particle rings — from buildRing / drawRing in script.js
+       ringA: 140 pts, baseR 0.30, clockwise   0.05 speed
+       ringB: 170 pts, baseR 0.365, counter   -0.035 speed
+       Translated to SVG: two dashed stroke rings with wobble via animateTransform */
+    @keyframes ringASpin {
+      from { transform:rotate(0deg);   }
+      to   { transform:rotate(360deg); }
     }
-    @keyframes arcRing1 {
-      from { transform: rotate(0deg); }
-      to   { transform: rotate(360deg); }
+    @keyframes ringBSpin {
+      from { transform:rotate(0deg);   }
+      to   { transform:rotate(-360deg);}
     }
-    @keyframes arcRing2 {
-      from { transform: rotate(0deg); }
-      to   { transform: rotate(-360deg); }
+    /* Flower petal (from index.html .flower) */
+    @keyframes flowerSpin {
+      to { transform:rotate(360deg); }
     }
-    @keyframes arcRing3 {
-      from { transform: rotate(30deg); }
-      to   { transform: rotate(390deg); }
-    }
-    @keyframes batBlink {
-      0%,100% { opacity: 1; }
-      50%      { opacity: 0.3; }
-    }
-    @keyframes scanLine {
-      0%   { transform: translateY(0px);   opacity: 0.4; }
-      50%  { opacity: 0.7; }
-      100% { transform: translateY(540px); opacity: 0.4; }
-    }
-    @keyframes msgIn {
-      from { opacity: 0; transform: translateY(8px); }
-      to   { opacity: 1; transform: translateY(0); }
-    }
+    /* Ripple from style.css @keyframes rippleOut */
     @keyframes rippleOut {
-      0%   { r: 40; opacity: 0.55; }
-      100% { r: 90; opacity: 0; }
+      0%   { r:48; opacity:0.55; }
+      100% { r:105; opacity:0; }
     }
-    @keyframes floatPanel {
-      0%,100% { transform: translateY(0); }
-      50%      { transform: translateY(-5px); }
+    /* idlePulse → orb */
+    @keyframes pulse {
+      0%,100% { transform:scale(1); filter:brightness(1); }
+      50%      { transform:scale(1.035); filter:brightness(1.12); }
     }
-    @keyframes cursorBlink {
-      0%,100% { opacity: 1; }
-      50%      { opacity: 0; }
+    /* Float for panels */
+    @keyframes float {
+      0%,100% { transform:translateY(0); }
+      50%      { transform:translateY(-5px); }
     }
+    @keyframes float2 {
+      0%,100% { transform:translateY(0); }
+      50%      { transform:translateY(-4px); }
+    }
+    /* Scanline */
+    @keyframes scan {
+      0%   { transform:translateY(-4px); opacity:0.5; }
+      50%  { opacity:0.8; }
+      100% { transform:translateY(564px); opacity:0.5; }
+    }
+    /* Cursor blink */
+    @keyframes blink {
+      0%,100% { opacity:1; }
+      50%      { opacity:0; }
+    }
+    /* Status dot */
     @keyframes dotPulse {
-      0%,100% { opacity: 1; }
-      50%      { opacity: 0.2; }
+      0%,100% { opacity:1; }
+      50%      { opacity:0.2; }
     }
-    @keyframes waveBar {
-      0%,100% { transform: scaleY(0.4); }
-      50%      { transform: scaleY(1.15); }
+    /* msgIn from style.css */
+    @keyframes msgIn {
+      from { opacity:0; transform:translateY(6px); }
+      to   { opacity:1; transform:translateY(0); }
+    }
+    /* Progress bar load */
+    @keyframes barLoad { from{width:0;} to{width:var(--w);} }
+    /* Particle ring wobble (simulates the wobbleAmp from script.js buildRing) */
+    @keyframes wobbleA {
+      0%   { r:91; }
+      25%  { r:93; }
+      50%  { r:89; }
+      75%  { r:94; }
+      100% { r:91; }
+    }
+    @keyframes wobbleB {
+      0%   { r:111; }
+      25%  { r:108; }
+      50%  { r:113; }
+      75%  { r:109; }
+      100% { r:111; }
     }
 
-    /* ── Typography (exact from style.css) ─ */
-    .font-display { font-family: 'Share Tech Mono', 'Courier New', monospace; letter-spacing: 3px; }
-    .font-mono    { font-family: 'Share Tech Mono', 'Courier New', monospace; }
-
-    .teal   { fill: #2fe6cf; }
-    .tealDim{ fill: #5fa89c; }
-    .hi     { fill: #dffbf6; }
-    .lo     { fill: #5fa89c; }
-    .green  { fill: #00ff88; }
-    .amber  { fill: #ffb347; }
-    .red    { fill: #ff4d4d; }
+    .fm  { font-family:'Share Tech Mono','Courier New',monospace; }
+    .lo  { fill:#5fa89c; }
+    .hi  { fill:#dffbf6; }
+    .tl  { fill:#2fe6cf; }
+    .gr  { fill:#00ff88; }
+    .am  { fill:#ffb347; }
   </style>
 
-  <!-- ══ MASTER BACKGROUND ══ -->
-  <rect width="960" height="540" fill="url(#bodyBg)"/>
+  <!-- ═══ MASTER BACKGROUND ═══ -->
+  <rect width="960" height="560" fill="url(#bg)"/>
+  <rect width="960" height="560" fill="url(#dotGrid)" mask="url(#gm)"/>
+  <!-- Scanline sweep -->
+  <rect x="0" y="0" width="960" height="2" fill="#2fe6cf" opacity="0.06"
+        style="animation:scan 8s linear infinite;"/>
 
-  <!-- Scanlines overlay matching style.css .scanlines -->
-  <rect width="960" height="540" fill="none"
-        style="background: repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(0,0,0,.06) 2px, rgba(0,0,0,.06) 4px);"
-        opacity="0.35"/>
-
-  <!-- Dot grid overlay (body::before from style.css) -->
-  <rect width="960" height="540" fill="url(#dotGrid)" mask="url(#gridMask)"/>
-
-  <!-- Moving scan line -->
-  <rect x="0" y="0" width="960" height="1.5" fill="#2fe6cf" opacity="0.1"
-        style="animation: scanLine 7s linear infinite;"/>
-
-  <!-- ══ TITLE BAR (exact from index.html .titlebar) ══ -->
+  <!-- ═══ TITLE BAR — exact from index.html .titlebar ═══ -->
   <rect x="0" y="0" width="960" height="36" fill="#061a18" opacity="0.95"/>
   <rect x="0" y="35.5" width="960" height="0.5" fill="#2fe6cf" opacity="0.22"/>
-
-  <!-- Mini reactor icon (left) -->
+  <!-- Mini reactor icon -->
   <circle cx="18" cy="18" r="7" fill="none" stroke="#2fe6cf" stroke-width="1.5"
-          style="filter: drop-shadow(0 0 6px #2fe6cf55);"/>
-  <circle cx="18" cy="18" r="2.5" fill="#2fe6cf"
-          style="filter: drop-shadow(0 0 6px #2fe6cf);"/>
+          style="filter:drop-shadow(0 0 5px rgba(47,230,207,0.4));"/>
+  <circle cx="18" cy="18" r="2.5" fill="#2fe6cf"/>
+  <!-- Label -->
+  <text x="32" y="22.5" class="fm" font-size="10" fill="#5fa89c" letter-spacing="2">J.A.R.V.I.S.</text>
+  <text x="104" y="22.5" class="fm" font-size="9" fill="#2fe6cf" letter-spacing="1">DEVELOPER SYSTEM</text>
+  <!-- Center email -->
+  <text x="480" y="22.5" text-anchor="middle" class="fm" font-size="10" fill="#5fa89c" letter-spacing="0.5">jaichandran20871@gmail.com</text>
+  <!-- Window controls -->
+  <line x1="886" y1="19" x2="900" y2="19" stroke="#5fa89c" stroke-width="1.8"/>
+  <rect x="909" y="13" width="10" height="10" rx="1" fill="none" stroke="#5fa89c" stroke-width="1.8"/>
+  <line x1="922" y1="13" x2="936" y2="27" stroke="#5fa89c" stroke-width="1.8"/>
+  <line x1="936" y1="13" x2="922" y2="27" stroke="#5fa89c" stroke-width="1.8"/>
+  <!-- Status -->
+  <circle cx="866" cy="18" r="3.5" fill="#00ff88"
+          style="filter:drop-shadow(0 0 6px #00ff88);animation:dotPulse 2s ease-in-out infinite;"/>
 
-  <!-- JARVIS label (font-display, 10px, letter-spacing 2px) -->
-  <text x="32" y="22" class="font-display" font-size="10" fill="#5fa89c" letter-spacing="2">J.A.R.V.I.S.</text>
-  <text x="104" y="22" class="font-display" font-size="9" fill="#2fe6cf" letter-spacing="1">HUD v2</text>
-
-  <!-- Center clock area — show email -->
-  <text x="480" y="22" text-anchor="middle" class="font-mono" font-size="10" fill="#5fa89c" letter-spacing="1">
-    jaichandran20871@gmail.com
-  </text>
-
-  <!-- Window controls (right) matching tb-controls -->
-  <!-- Minimize -->
-  <rect x="888" y="10" width="20" height="18" rx="3" fill="none"/>
-  <line x1="891" y1="19" x2="905" y2="19" stroke="#5fa89c" stroke-width="1.8"/>
-  <!-- Restore -->
-  <rect x="912" y="10" width="20" height="18" rx="3" fill="none"/>
-  <rect x="915" y="13" width="10" height="10" rx="1" fill="none" stroke="#5fa89c" stroke-width="1.8"/>
-  <!-- Close -->
-  <rect x="936" y="10" width="20" height="18" rx="3" fill="none"/>
-  <line x1="939" y1="14" x2="953" y2="26" stroke="#5fa89c" stroke-width="1.8"/>
-  <line x1="953" y1="14" x2="939" y2="26" stroke="#5fa89c" stroke-width="1.8"/>
-
-  <!-- Online status dot -->
-  <circle cx="876" cy="18" r="3.5" fill="#00ff88"
-          style="animation: dotPulse 2s ease-in-out infinite;"/>
-
-  <!-- ══ LEFT FLOATING PANEL — Clock style (panel top-left) ══ -->
-  <!-- panel: background rgba(6,26,24,0.55), border rgba(47,230,207,0.22) -->
-  <rect x="10" y="48" width="200" height="220" rx="10" fill="url(#panelFill)"
-        stroke="#2fe6cf" stroke-width="0.5" stroke-opacity="0.22"
-        style="animation: floatPanel 5.5s ease-in-out infinite; filter: drop-shadow(0 8px 32px rgba(0,0,0,0.4));"/>
-
-  <!-- p-head: font-mono 10px, letter-spacing 2px, text-lo color -->
-  <text x="20" y="68" class="font-mono" font-size="10" fill="#5fa89c" letter-spacing="2">BIOMETRIC.ID</text>
-  <circle cx="198" cy="64" r="3" fill="#2fe6cf"
-          style="filter: drop-shadow(0 0 6px #2fe6cf); animation: dotPulse 1.8s ease-in-out infinite;"/>
-
-  <!-- Portrait frame with HUD brackets (corner style from style.css) -->
-  <rect x="26" y="78" width="178" height="148" rx="3" fill="#020f0d"
-        stroke="#2fe6cf" stroke-width="0.5" stroke-opacity="0.35"/>
-  <!-- Corner brackets — teal, 1.5px (matches glass-border style) -->
-  <polyline points="26,94 26,78 42,78"   fill="none" stroke="#2fe6cf" stroke-width="2" style="filter: drop-shadow(0 0 4px #2fe6cf55);"/>
-  <polyline points="188,78 204,78 204,94" fill="none" stroke="#2fe6cf" stroke-width="2" style="filter: drop-shadow(0 0 4px #2fe6cf55);"/>
-  <polyline points="26,210 26,226 42,226"  fill="none" stroke="#2fe6cf" stroke-width="2" style="filter: drop-shadow(0 0 4px #2fe6cf55);"/>
-  <polyline points="188,226 204,226 204,210" fill="none" stroke="#2fe6cf" stroke-width="2" style="filter: drop-shadow(0 0 4px #2fe6cf55);"/>
-
-  <!-- Profile photo — raw GitHub URL -->
-  <image href="https://raw.githubusercontent.com/Stark345/Stark345/main/assets/github_profile.jpg"
-         x="26" y="78" width="178" height="148"
-         preserveAspectRatio="xMidYMid slice"
-         clip-path="url(#portraitClip)"/>
-
-  <!-- Scan line on portrait -->
-  <line x1="26" y1="152" x2="204" y2="152" stroke="#2fe6cf" stroke-width="0.8" opacity="0.2"/>
-  <!-- Center cross-hair -->
-  <line x1="115" y1="78"  x2="115" y2="226" stroke="#2fe6cf" stroke-width="0.4" opacity="0.12"/>
-
-  <!-- Subject label below portrait -->
-  <text x="115" y="243" text-anchor="middle" class="font-mono" font-size="8" fill="#2fe6cf" letter-spacing="2">SUBJECT // VERIFIED</text>
-
-  <!-- ══ LEFT PANEL 2 — CPU style (panel mid-left) ══ -->
-  <rect x="10" y="278" width="200" height="160" rx="10" fill="url(#panelFill)"
-        stroke="#2fe6cf" stroke-width="0.5" stroke-opacity="0.22"
-        style="animation: floatPanel 5.5s ease-in-out 1.2s infinite;"/>
-
-  <text x="20" y="297" class="font-mono" font-size="10" fill="#5fa89c" letter-spacing="2">CORE.VITALS</text>
-  <circle cx="198" cy="293" r="3" fill="#2fe6cf" style="filter: drop-shadow(0 0 6px #2fe6cf); animation: dotPulse 2.4s ease-in-out infinite;"/>
-
-  <!-- p-value: font-display 22px (designation) -->
-  <text x="20" y="318" class="font-display" font-size="13" fill="#dffbf6" letter-spacing="1">S. JAICHANDRAN</text>
-
-  <text x="20" y="336" class="font-mono" font-size="8" fill="#5fa89c" letter-spacing="1">AI FULL STACK DEVELOPER</text>
-
-  <!-- p-bar style progress bars -->
-  <text x="20" y="356" class="font-mono" font-size="8" fill="#5fa89c" letter-spacing="1">NEURAL LINK</text>
-  <rect x="20" y="360" width="172" height="4" rx="2" fill="rgba(255,255,255,0.07)"/>
-  <rect x="20" y="360" width="154" height="4" rx="2" fill="#2fe6cf"
-        style="filter: drop-shadow(0 0 6px #2fe6cf);">
-    <animate attributeName="width" from="0" to="154" dur="1.8s" fill="freeze"/>
-  </rect>
-
-  <text x="20" y="376" class="font-mono" font-size="8" fill="#5fa89c" letter-spacing="1">COMPILE PWR</text>
-  <rect x="20" y="380" width="172" height="4" rx="2" fill="rgba(255,255,255,0.07)"/>
-  <rect x="20" y="380" width="163" height="4" rx="2" fill="#2fe6cf"
-        style="filter: drop-shadow(0 0 6px #2fe6cf);">
-    <animate attributeName="width" from="0" to="163" dur="2.2s" fill="freeze"/>
-  </rect>
-
-  <text x="20" y="396" class="font-mono" font-size="8" fill="#5fa89c" letter-spacing="1">AI INFERENCE</text>
-  <rect x="20" y="400" width="172" height="4" rx="2" fill="rgba(255,255,255,0.07)"/>
-  <rect x="20" y="400" width="144" height="4" rx="2" fill="#2fe6cf"
-        style="filter: drop-shadow(0 0 6px #2fe6cf);">
-    <animate attributeName="width" from="0" to="144" dur="2.6s" fill="freeze"/>
-  </rect>
-
-  <text x="20" y="422" class="font-mono" font-size="8" fill="#5fa89c">STATUS</text>
-  <circle cx="75" cy="419" r="3.5" fill="#00ff88"
-          style="filter: drop-shadow(0 0 6px #00ff88); animation: dotPulse 2s ease-in-out infinite;"/>
-  <text x="83" y="422" class="font-mono" font-size="9" fill="#00ff88" letter-spacing="1">ONLINE</text>
-
-  <!-- ══ CENTER — JARVIS ORB + RINGS ══ -->
-  <!-- Brand label above orb -->
-  <text x="480" y="72" text-anchor="middle" class="font-display" font-size="13" fill="#dffbf6"
-        letter-spacing="7" style="text-shadow: 0 0 14px #2fe6cf55; filter: drop-shadow(0 0 10px #2fe6cf55);">
+  <!-- ═══════════════════════════════════════════════════
+       BRAND LABEL (from index.html .brand)
+       ═══════════════════════════════════════════════════ -->
+  <text x="480" y="66" text-anchor="middle" class="fm" font-size="13" fill="#dffbf6"
+        letter-spacing="7" style="filter:drop-shadow(0 0 14px rgba(47,230,207,0.35));">
     J . A . R . V . I . S .
   </text>
-  <text x="480" y="88" text-anchor="middle" class="font-mono" font-size="9" fill="#5fa89c" letter-spacing="3">
-    SYSTEM ONLINE — STARK CORE v3.0
+  <text x="480" y="82" text-anchor="middle" class="fm" font-size="9" fill="#5fa89c" letter-spacing="3">
+    SYSTEM ONLINE — AWAITING INPUT
   </text>
 
-  <!-- Orb glow halo -->
-  <circle cx="480" cy="270" r="115" fill="#2fe6cf" opacity="0.03"/>
-  <circle cx="480" cy="270" r="100" fill="#2fe6cf" opacity="0.02"/>
+  <!-- ═══════════════════════════════════════════════════
+       LEFT PANEL — BIOMETRIC / PARTICLE MORPH AREA
+       Glass panel from style.css .panel
+       ═══════════════════════════════════════════════════ -->
+  <rect x="10" y="96" width="220" height="440" rx="10" fill="url(#glass)"
+        stroke="#2fe6cf" stroke-width="0.5" stroke-opacity="0.22"
+        style="animation:float 5.5s ease-in-out infinite;"/>
+  <!-- p-head style -->
+  <text x="120" y="116" text-anchor="middle" class="fm" font-size="9" fill="#5fa89c" letter-spacing="2">BIOMETRIC.ID</text>
+  <circle cx="212" cy="112" r="3" fill="#2fe6cf"
+          style="filter:drop-shadow(0 0 6px #2fe6cf);animation:dotPulse 1.8s ease-in-out infinite;"/>
+  <line x1="10" y1="122" x2="230" y2="122" stroke="#2fe6cf" stroke-width="0.4" opacity="0.22"/>
 
-  <!-- Outer dashed ring -->
-  <g transform="translate(480,270)" style="animation: arcRing1 18s linear infinite; transform-origin: 0 0;">
-    <circle cx="0" cy="0" r="110" fill="none" stroke="#2fe6cf" stroke-width="0.8"
-            stroke-dasharray="6 14" opacity="0.5"/>
-    <!-- Cardinal tick marks -->
-    <rect x="-2" y="-113" width="4" height="7" rx="1" fill="#2fe6cf" opacity="0.8"/>
-    <rect x="-2" y="106"  width="4" height="7" rx="1" fill="#2fe6cf" opacity="0.8"/>
-    <rect x="-113" y="-2" width="7" height="4" rx="1" fill="#2fe6cf" opacity="0.8"/>
-    <rect x="106"  y="-2" width="7" height="4" rx="1" fill="#2fe6cf" opacity="0.8"/>
+  <!-- Portrait frame -->
+  <rect x="22" y="132" width="196" height="210" rx="3" fill="#020f0d"
+        stroke="#2fe6cf" stroke-width="0.5" stroke-opacity="0.35"/>
+  <!-- HUD corner brackets -->
+  <polyline points="22,148 22,132 38,132" fill="none" stroke="#2fe6cf" stroke-width="1.8"
+            style="filter:drop-shadow(0 0 4px rgba(47,230,207,0.4));"/>
+  <polyline points="202,132 218,132 218,148" fill="none" stroke="#2fe6cf" stroke-width="1.8"
+            style="filter:drop-shadow(0 0 4px rgba(47,230,207,0.4));"/>
+  <polyline points="22,326 22,342 38,342" fill="none" stroke="#2fe6cf" stroke-width="1.8"
+            style="filter:drop-shadow(0 0 4px rgba(47,230,207,0.4));"/>
+  <polyline points="202,342 218,342 218,326" fill="none" stroke="#2fe6cf" stroke-width="1.8"
+            style="filter:drop-shadow(0 0 4px rgba(47,230,207,0.4));"/>
+
+  <!-- Particle morph GIF — portrait and morph sequence -->
+  <image href="assets/jarvis-morph.gif"
+         x="22" y="132" width="196" height="210"
+         preserveAspectRatio="xMidYMid meet"/>
+  <!-- Scan line overlay on portrait -->
+  <rect x="22" y="132" width="196" height="210" fill="none"
+        stroke="rgba(47,230,207,0.2)" stroke-width="0.5"/>
+  <line x1="22" y1="237" x2="218" y2="237" stroke="#2fe6cf" stroke-width="0.5" opacity="0.15"/>
+  <!-- Identity verified tag -->
+  <text x="120" y="358" text-anchor="middle" class="fm" font-size="7.5" fill="#2fe6cf" letter-spacing="2">IDENTITY VERIFIED</text>
+  <circle cx="84" cy="355" r="2.5" fill="#00ff88" style="animation:dotPulse 2s ease-in-out infinite;"/>
+  <circle cx="156" cy="355" r="2.5" fill="#00ff88" style="animation:dotPulse 2s ease-in-out 0.5s infinite;"/>
+
+  <line x1="10" y1="364" x2="230" y2="364" stroke="#2fe6cf" stroke-width="0.3" opacity="0.22"/>
+
+  <!-- SYSTEM.INFO inside left panel (below portrait) -->
+  <text x="22" y="382" class="fm" font-size="8" fill="#5fa89c" letter-spacing="1">SUBJECT</text>
+  <text x="22" y="396" class="fm" font-size="10" fill="#dffbf6" letter-spacing="1">S. JAICHANDRAN</text>
+
+  <text x="22" y="414" class="fm" font-size="8" fill="#5fa89c" letter-spacing="1">DESIGNATION</text>
+  <text x="22" y="426" class="fm" font-size="8.5" fill="#2fe6cf">AI FULL STACK DEVELOPER</text>
+
+  <text x="22" y="444" class="fm" font-size="8" fill="#5fa89c" letter-spacing="1">LOCATION</text>
+  <text x="22" y="456" class="fm" font-size="9" fill="#dffbf6">CHENNAI, INDIA</text>
+
+  <text x="22" y="474" class="fm" font-size="8" fill="#5fa89c" letter-spacing="1">EDUCATION</text>
+  <text x="22" y="486" class="fm" font-size="8.5" fill="#dffbf6">B.TECH IT (HONOURS)</text>
+
+  <text x="22" y="504" class="fm" font-size="8" fill="#5fa89c" letter-spacing="1">STATUS</text>
+  <circle cx="78" cy="501" r="3" fill="#00ff88"
+          style="filter:drop-shadow(0 0 6px #00ff88);animation:dotPulse 2.2s ease-in-out infinite;"/>
+  <text x="86" y="504" class="fm" font-size="8.5" fill="#00ff88">AVAILABLE</text>
+
+  <!-- ═══════════════════════════════════════════════════
+       CENTER — JARVIS CORE ORB + RINGS
+       Translated from script.js buildRing / drawRing
+       ringA: 140 pts, baseR 0.30, clockwise
+       ringB: 170 pts, baseR 0.365, counter-clockwise
+       ═══════════════════════════════════════════════════ -->
+
+  <!-- Ambient glow halos -->
+  <circle cx="480" cy="310" r="130" fill="#2fe6cf" opacity="0.02"/>
+  <circle cx="480" cy="310" r="100" fill="#2fe6cf" opacity="0.025"/>
+
+  <!-- Ring B — outer, counter-clockwise, baseR 0.365 of min(W,H) -->
+  <!-- At 300px radius total: 0.365 * ~300 ≈ 110px radius -->
+  <g transform="translate(480,310)"
+     style="animation:ringBSpin 28s linear infinite;transform-origin:0 0;">
+    <!-- Simulate 170 particle ring as dashed stroke -->
+    <circle cx="0" cy="0" r="111" fill="none" stroke="#2fe6cf"
+            stroke-width="1.2" stroke-dasharray="1.5 3.0" opacity="0.42"/>
+    <!-- Larger wobble particles at cardinal points -->
+    <circle cx="0"    cy="-111" r="1.6" fill="#2fe6cf" opacity="0.7"/>
+    <circle cx="111"  cy="0"    r="1.6" fill="#2fe6cf" opacity="0.7"/>
+    <circle cx="0"    cy="111"  r="1.6" fill="#2fe6cf" opacity="0.7"/>
+    <circle cx="-111" cy="0"    r="1.6" fill="#2fe6cf" opacity="0.7"/>
+    <!-- Amber tick marks (Iron Man gold from style.css --amber) -->
+    <line x1="0"    y1="-107" x2="0"    y2="-118" stroke="#ffb347" stroke-width="2" opacity="0.75"/>
+    <line x1="0"    y1="107"  x2="0"    y2="118"  stroke="#ffb347" stroke-width="2" opacity="0.75"/>
+    <line x1="-107" y1="0"    x2="-118" y2="0"    stroke="#ffb347" stroke-width="2" opacity="0.75"/>
+    <line x1="107"  y1="0"    x2="118"  y2="0"    stroke="#ffb347" stroke-width="2" opacity="0.75"/>
   </g>
 
-  <!-- Mid ring — Iron Man amber ticks -->
-  <g transform="translate(480,270)" style="animation: arcRing2 10s linear infinite; transform-origin: 0 0;">
-    <circle cx="0" cy="0" r="88" fill="none" stroke="#2fe6cf" stroke-width="1.2"
-            stroke-dasharray="4 22 18 4" opacity="0.55"/>
-    <!-- Iron Man gold tick marks (amber from vars) -->
-    <line x1="0" y1="-84"  x2="0" y2="-94"  stroke="#ffb347" stroke-width="2.5" opacity="0.85"/>
-    <line x1="0" y1="84"   x2="0" y2="94"   stroke="#ffb347" stroke-width="2.5" opacity="0.85"/>
-    <line x1="-84" y1="0"  x2="-94" y2="0"  stroke="#ffb347" stroke-width="2.5" opacity="0.85"/>
-    <line x1="84"  y1="0"  x2="94"  y2="0"  stroke="#ffb347" stroke-width="2.5" opacity="0.85"/>
+  <!-- Ring A — inner, clockwise, baseR 0.30 of ~300 ≈ 91px -->
+  <g transform="translate(480,310)"
+     style="animation:ringASpin 20s linear infinite;transform-origin:0 0;">
+    <circle cx="0" cy="0" r="91" fill="none" stroke="#2fe6cf"
+            stroke-width="1.0" stroke-dasharray="1.2 2.8" opacity="0.35"/>
+    <!-- Heavier particles (the ones with alpha 0.85 from buildRing) -->
+    <circle cx="0"   cy="-91" r="2" fill="#2fe6cf" opacity="0.55"/>
+    <circle cx="91"  cy="0"   r="2" fill="#2fe6cf" opacity="0.55"/>
+    <circle cx="0"   cy="91"  r="2" fill="#2fe6cf" opacity="0.55"/>
+    <circle cx="-91" cy="0"   r="2" fill="#2fe6cf" opacity="0.55"/>
+    <!-- Iron Man red armor ring (inner) -->
+    <circle cx="0" cy="0" r="75" fill="none" stroke="#ff4d4d"
+            stroke-width="1.8" stroke-dasharray="22 10" opacity="0.6"/>
   </g>
 
-  <!-- Inner ring — Iron Man red armor segments -->
-  <g transform="translate(480,270)" style="animation: arcRing3 6s linear infinite; transform-origin: 0 0;">
-    <circle cx="0" cy="0" r="64" fill="none" stroke="#ff4d4d" stroke-width="2.2"
-            stroke-dasharray="28 12" opacity="0.7"/>
+  <!-- Flower petals (exact from index.html .flower — 7 circles at r=14 offsets) -->
+  <g transform="translate(480,310)"
+     style="animation:flowerSpin 60s linear infinite;transform-origin:0 0;opacity:0.4;">
+    <circle cx="0"     cy="-18" r="18" fill="none" stroke="#bdfff2" stroke-width="0.35"/>
+    <circle cx="0"     cy="18"  r="18" fill="none" stroke="#bdfff2" stroke-width="0.35"/>
+    <circle cx="-15.6" cy="-9"  r="18" fill="none" stroke="#bdfff2" stroke-width="0.35"/>
+    <circle cx="-15.6" cy="9"   r="18" fill="none" stroke="#bdfff2" stroke-width="0.35"/>
+    <circle cx="15.6"  cy="-9"  r="18" fill="none" stroke="#bdfff2" stroke-width="0.35"/>
+    <circle cx="15.6"  cy="9"   r="18" fill="none" stroke="#bdfff2" stroke-width="0.35"/>
+    <circle cx="0"     cy="0"   r="18" fill="none" stroke="#bdfff2" stroke-width="0.35"/>
   </g>
 
-  <!-- Inner teal ring -->
-  <circle cx="480" cy="270" r="50" fill="none" stroke="#2fe6cf" stroke-width="0.8" opacity="0.35"/>
+  <!-- ORB — exact gradient + shine from style.css .orb -->
+  <circle cx="480" cy="310" r="48" fill="url(#orb)"
+          style="filter:drop-shadow(0 0 34px rgba(47,230,207,0.33)) drop-shadow(0 0 80px rgba(47,230,207,0.14));animation:pulse 1.5s ease-in-out infinite;transform-origin:480px 310px;"/>
+  <circle cx="480" cy="310" r="48" fill="url(#orbShine)"/>
 
-  <!-- Flower petals (from index.html .flower svg) -->
-  <g transform="translate(480,270)"
-     style="animation: orbSpin 60s linear infinite; transform-origin: 0 0; opacity: 0.45;">
-    <circle cx="0"    cy="-18" r="18" fill="none" stroke="#bdfff2" stroke-width="0.35"/>
-    <circle cx="0"    cy="18"  r="18" fill="none" stroke="#bdfff2" stroke-width="0.35"/>
-    <circle cx="-15.6" cy="-9" r="18" fill="none" stroke="#bdfff2" stroke-width="0.35"/>
-    <circle cx="-15.6" cy="9"  r="18" fill="none" stroke="#bdfff2" stroke-width="0.35"/>
-    <circle cx="15.6"  cy="-9" r="18" fill="none" stroke="#bdfff2" stroke-width="0.35"/>
-    <circle cx="15.6"  cy="9"  r="18" fill="none" stroke="#bdfff2" stroke-width="0.35"/>
-    <circle cx="0"    cy="0"   r="18" fill="none" stroke="#bdfff2" stroke-width="0.35"/>
-  </g>
-
-  <!-- ORB: exact gradient from style.css .orb -->
-  <circle cx="480" cy="270" r="42" fill="url(#orbGrad)"
-          style="filter: drop-shadow(0 0 34px #2fe6cf55) drop-shadow(0 0 80px rgba(47,230,207,0.14)); animation: idlePulse 1.5s ease-in-out infinite; transform-origin: 480px 270px;"/>
-  <!-- Orb shine overlay -->
-  <circle cx="480" cy="270" r="42" fill="url(#orbShine)"/>
-
-  <!-- Ripple ring animation -->
-  <circle cx="480" cy="270" fill="none" stroke="#2fe6cf" stroke-width="1" opacity="0">
-    <animate attributeName="r"       values="42;90"   dur="2s" repeatCount="indefinite" begin="0.5s"/>
-    <animate attributeName="opacity" values="0.55;0" dur="2s" repeatCount="indefinite" begin="0.5s"/>
+  <!-- Ripple from style.css .ripple -->
+  <circle cx="480" cy="310" fill="none" stroke="#2fe6cf" stroke-width="1">
+    <animate attributeName="r"       values="48;105" dur="2.4s" repeatCount="indefinite" begin="1s"/>
+    <animate attributeName="opacity" values="0.55;0"  dur="2.4s" repeatCount="indefinite" begin="1s"/>
   </circle>
 
-  <!-- Iron Man triangle inside orb -->
-  <polygon points="480,252 464,278 496,278"
-           fill="none" stroke="#2fe6cf" stroke-width="1.8" opacity="0.9"
-           style="filter: drop-shadow(0 0 6px #2fe6cf);"/>
+  <!-- Triangle inside orb (Iron Man arc reactor) -->
+  <polygon points="480,292 464,320 496,320" fill="none" stroke="#2fe6cf" stroke-width="1.5"
+           opacity="0.85" style="filter:drop-shadow(0 0 5px rgba(47,230,207,0.6));"/>
 
-  <!-- Name block below orb -->
-  <line x1="310" y1="330" x2="650" y2="330" stroke="#2fe6cf" stroke-width="0.5" opacity="0.3" stroke-dasharray="5 4"/>
-  <text x="480" y="350" text-anchor="middle" class="font-display" font-size="20" fill="#dffbf6"
-        letter-spacing="4" style="filter: drop-shadow(0 0 12px #2fe6cf55);">
+  <!-- ═══ IDENTITY BLOCK (below orb) ═══ -->
+  <line x1="310" y1="374" x2="650" y2="374" stroke="#2fe6cf" stroke-width="0.5" opacity="0.22"/>
+  <text x="480" y="396" text-anchor="middle" class="fm" font-size="20" fill="#dffbf6"
+        letter-spacing="4" style="filter:drop-shadow(0 0 10px rgba(47,230,207,0.3));">
     S. JAICHANDRAN
   </text>
-  <text x="480" y="368" text-anchor="middle" class="font-mono" font-size="9" fill="#5fa89c" letter-spacing="3">
+  <text x="480" y="414" text-anchor="middle" class="fm" font-size="9" fill="#5fa89c" letter-spacing="3">
     AI-INTEGRATED FULL STACK DEVELOPER
   </text>
-  <line x1="310" y1="374" x2="650" y2="374" stroke="#2fe6cf" stroke-width="0.5" opacity="0.3" stroke-dasharray="5 4"/>
+  <line x1="310" y1="420" x2="650" y2="420" stroke="#2fe6cf" stroke-width="0.5" opacity="0.22"/>
 
-  <!-- Stack pills row -->
+  <!-- Stack pills -->
   <g>
-    <rect x="302" y="382" width="66" height="16" rx="3" fill="#061a18"
-          stroke="#2fe6cf" stroke-width="0.5" stroke-opacity="0.4"/>
-    <text x="335" y="393" text-anchor="middle" class="font-mono" font-size="7.5" fill="#2fe6cf">REACT·NEXT</text>
-
-    <rect x="374" y="382" width="60" height="16" rx="3" fill="#061a18"
-          stroke="#2fe6cf" stroke-width="0.5" stroke-opacity="0.4"/>
-    <text x="404" y="393" text-anchor="middle" class="font-mono" font-size="7.5" fill="#2fe6cf">NODE·EXPRESS</text>
-
-    <rect x="440" y="382" width="58" height="16" rx="3" fill="#061a18"
-          stroke="#2fe6cf" stroke-width="0.5" stroke-opacity="0.4"/>
-    <text x="469" y="393" text-anchor="middle" class="font-mono" font-size="7.5" fill="#2fe6cf">PY·FLASK·TS</text>
-
-    <rect x="504" y="382" width="66" height="16" rx="3" fill="#061a18"
-          stroke="#2fe6cf" stroke-width="0.5" stroke-opacity="0.4"/>
-    <text x="537" y="393" text-anchor="middle" class="font-mono" font-size="7.5" fill="#2fe6cf">LLM·RAG·AGENTS</text>
-
-    <rect x="576" y="382" width="66" height="16" rx="3" fill="#061a18"
-          stroke="#2fe6cf" stroke-width="0.5" stroke-opacity="0.4"/>
-    <text x="609" y="393" text-anchor="middle" class="font-mono" font-size="7.5" fill="#2fe6cf">MONGO·MYSQL</text>
+    <rect x="318" y="428" width="60" height="15" rx="3" fill="#061a18" stroke="#2fe6cf" stroke-width="0.5" stroke-opacity="0.35"/>
+    <text x="348" y="439" text-anchor="middle" class="fm" font-size="7" fill="#2fe6cf">React·Next</text>
+    <rect x="384" y="428" width="62" height="15" rx="3" fill="#061a18" stroke="#2fe6cf" stroke-width="0.5" stroke-opacity="0.35"/>
+    <text x="415" y="439" text-anchor="middle" class="fm" font-size="7" fill="#2fe6cf">Node·Express</text>
+    <rect x="452" y="428" width="55" height="15" rx="3" fill="#061a18" stroke="#2fe6cf" stroke-width="0.5" stroke-opacity="0.35"/>
+    <text x="479" y="439" text-anchor="middle" class="fm" font-size="7" fill="#2fe6cf">Python·Flask</text>
+    <rect x="513" y="428" width="64" height="15" rx="3" fill="#061a18" stroke="#ffb347" stroke-width="0.5" stroke-opacity="0.4"/>
+    <text x="545" y="439" text-anchor="middle" class="fm" font-size="7" fill="#ffb347">LLM·RAG·Agents</text>
+    <rect x="583" y="428" width="58" height="15" rx="3" fill="#061a18" stroke="#2fe6cf" stroke-width="0.5" stroke-opacity="0.35"/>
+    <text x="612" y="439" text-anchor="middle" class="fm" font-size="7" fill="#2fe6cf">Mongo·MySQL</text>
   </g>
 
-  <!-- Telemetry bar — 3 columns (panel style) -->
-  <rect x="310" y="408" width="340" height="62" rx="6" fill="url(#panelFill)"
-        stroke="#2fe6cf" stroke-width="0.5" stroke-opacity="0.22"/>
-
-  <!-- Dividers -->
-  <line x1="423" y1="408" x2="423" y2="470" stroke="#2fe6cf" stroke-width="0.4" opacity="0.22"/>
-  <line x1="537" y1="408" x2="537" y2="470" stroke="#2fe6cf" stroke-width="0.4" opacity="0.22"/>
-
-  <!-- Col 1: Contributions -->
-  <text x="366" y="424" text-anchor="middle" class="font-mono" font-size="8" fill="#5fa89c" letter-spacing="1">COMMITS</text>
-  <text x="366" y="450" text-anchor="middle" class="font-display" font-size="24" fill="#dffbf6"
-        style="filter: drop-shadow(0 0 10px #2fe6cf55);">314</text>
-  <text x="366" y="463" text-anchor="middle" class="font-mono" font-size="7" fill="#5fa89c">THIS YEAR</text>
-
-  <!-- Col 2: Energy (amber = Iron Man gold) -->
-  <text x="480" y="424" text-anchor="middle" class="font-mono" font-size="8" fill="#5fa89c" letter-spacing="1">ARC ENERGY</text>
-  <text x="480" y="450" text-anchor="middle" class="font-display" font-size="24" fill="#ffb347"
-        style="filter: drop-shadow(0 0 10px rgba(255,179,71,0.4));">3.0</text>
-  <text x="480" y="463" text-anchor="middle" class="font-mono" font-size="7" fill="#5fa89c">TERRA-WATTS</text>
-
-  <!-- Col 3: Streak (green = online color) -->
-  <text x="594" y="424" text-anchor="middle" class="font-mono" font-size="8" fill="#5fa89c" letter-spacing="1">STREAK</text>
-  <text x="594" y="450" text-anchor="middle" class="font-display" font-size="24" fill="#00ff88"
-        style="filter: drop-shadow(0 0 10px rgba(0,255,136,0.4));">12d</text>
-  <text x="594" y="463" text-anchor="middle" class="font-mono" font-size="7" fill="#5fa89c">ACTIVE</text>
-
-  <!-- Pipeline status bar -->
-  <rect x="310" y="476" width="340" height="28" rx="4" fill="#030e0c"
+  <!-- Pipeline status mini-bar -->
+  <rect x="310" y="452" width="340" height="18" rx="3" fill="#030e0c"
         stroke="#2fe6cf" stroke-width="0.4" stroke-opacity="0.18"/>
-  <text x="320" y="488" class="font-mono" font-size="7.5" fill="#5fa89c">USER→REACT→API→NODE→LLM→TOOLS→DB→STREAM</text>
-  <line x1="310" y1="492" x2="650" y2="492" stroke="#2fe6cf" stroke-width="0.3" opacity="0.18"/>
-  <circle cx="320" cy="499" r="3" fill="#00ff88"
-          style="animation: dotPulse 1.8s ease-in-out infinite;"/>
-  <text x="328" y="501" class="font-mono" font-size="7" fill="#00ff88">ALL SYSTEMS NOMINAL</text>
-  <text x="540" y="501" class="font-mono" font-size="7" fill="#5fa89c">13.08°N / 80.27°E</text>
+  <circle cx="320" cy="461" r="2.5" fill="#00ff88"
+          style="animation:dotPulse 1.8s ease-in-out infinite;"/>
+  <text x="328" y="464" class="fm" font-size="7" fill="#00ff88">PIPELINE ACTIVE</text>
+  <text x="430" y="464" class="fm" font-size="7" fill="#5fa89c">  USER → AI → RESPONSE → STREAM</text>
 
-  <!-- ══ RIGHT FLOATING PANEL — Battery style (panel top-right) ══ -->
-  <rect x="750" y="48" width="200" height="190" rx="10" fill="url(#panelFill)"
+  <!-- ═══════════════════════════════════════════════════
+       RIGHT PANEL — JARVIS CONSOLE (chat-panel style)
+       ═══════════════════════════════════════════════════ -->
+  <rect x="730" y="96" width="220" height="440" rx="10" fill="url(#glass)"
         stroke="#2fe6cf" stroke-width="0.5" stroke-opacity="0.22"
-        style="animation: floatPanel 5.5s ease-in-out 0.5s infinite;"/>
+        style="animation:float2 5.5s ease-in-out 0.8s infinite;"/>
 
-  <text x="760" y="68" class="font-mono" font-size="10" fill="#5fa89c" letter-spacing="2">ENERGY CORE</text>
-  <circle cx="938" cy="64" r="3" fill="#2fe6cf"
-          style="filter: drop-shadow(0 0 6px #2fe6cf); animation: batBlink 0.8s ease-in-out infinite;"/>
+  <!-- Panel header (chat-ph style) -->
+  <text x="840" y="116" text-anchor="middle" class="fm" font-size="9" fill="#2fe6cf" letter-spacing="2">JARVIS CONSOLE</text>
+  <circle cx="940" cy="112" r="3" fill="#2fe6cf"
+          style="filter:drop-shadow(0 0 6px #2fe6cf);animation:dotPulse 2.2s ease-in-out infinite;"/>
+  <line x1="730" y1="122" x2="950" y2="122" stroke="#2fe6cf" stroke-width="0.4" opacity="0.22"/>
 
-  <!-- Arc reactor mini diagram -->
-  <g transform="translate(851,130)">
-    <!-- Outer ring -->
-    <circle cx="0" cy="0" r="44" fill="none" stroke="#2fe6cf" stroke-width="1"
-            stroke-dasharray="5 8" opacity="0.6"
-            style="animation: arcRing1 8s linear infinite; transform-origin: 0 0;"/>
-    <!-- Mid ring amber -->
-    <circle cx="0" cy="0" r="32" fill="none" stroke="#ffb347" stroke-width="1.5"
-            stroke-dasharray="16 10" opacity="0.7"
-            style="animation: arcRing2 5s linear infinite; transform-origin: 0 0;"/>
-    <!-- Inner red -->
-    <circle cx="0" cy="0" r="22" fill="none" stroke="#ff4d4d" stroke-width="1.8"
-            stroke-dasharray="14 6" opacity="0.65"
-            style="animation: arcRing3 3s linear infinite; transform-origin: 0 0;"/>
-    <!-- Core orb -->
-    <circle cx="0" cy="0" r="13" fill="url(#orbGrad)"
-            style="filter: drop-shadow(0 0 14px #2fe6cf55); animation: idlePulse 1.5s ease-in-out infinite; transform-origin: 0 0;"/>
-    <circle cx="0" cy="0" r="13" fill="url(#orbShine)"/>
-    <!-- Triangle core -->
-    <polygon points="0,-8 -7,5 7,5" fill="none" stroke="#2fe6cf" stroke-width="1.2" opacity="0.9"/>
+  <!-- Boot sequence (msg-body jarvis-body style) -->
+  <g>
+    <text x="742" y="142" class="fm" font-size="8" fill="#5fa89c"
+          style="animation:msgIn .3s ease-out;">&gt; BOOTING STARK CORE</text>
+    <text x="742" y="158" class="fm" font-size="8" fill="#2fe6cf"
+          style="animation:msgIn .3s .1s ease-out both;">&gt; KERNEL LOADED ✓</text>
+    <text x="742" y="174" class="fm" font-size="8" fill="#2fe6cf"
+          style="animation:msgIn .3s .2s ease-out both;">&gt; AI PIPELINE ACTIVE ✓</text>
+    <text x="742" y="190" class="fm" font-size="8" fill="#2fe6cf"
+          style="animation:msgIn .3s .3s ease-out both;">&gt; LLM AGENTS ONLINE ✓</text>
+    <text x="742" y="206" class="fm" font-size="8" fill="#2fe6cf"
+          style="animation:msgIn .3s .4s ease-out both;">&gt; VECTOR STORE READY ✓</text>
+    <text x="742" y="222" class="fm" font-size="8" fill="#00ff88"
+          style="animation:msgIn .3s .5s ease-out both;">&gt; ALL SYSTEMS NOMINAL ✓</text>
   </g>
 
-  <text x="851" y="195" text-anchor="middle" class="font-mono" font-size="8" fill="#5fa89c">ARC REACTOR // ACTIVE</text>
-  <text x="851" y="210" text-anchor="middle" class="font-display" font-size="14" fill="#2fe6cf"
-        style="filter: drop-shadow(0 0 8px #2fe6cf55);">99.97%</text>
-  <text x="851" y="224" text-anchor="middle" class="font-mono" font-size="7" fill="#5fa89c">POWER OUTPUT</text>
+  <line x1="730" y1="232" x2="950" y2="232" stroke="#2fe6cf" stroke-width="0.3" opacity="0.18"/>
 
-  <!-- ══ RIGHT PANEL 2 — Radar/Chat style ══ -->
-  <rect x="750" y="248" width="200" height="240" rx="10" fill="url(#panelFill)"
-        stroke="#2fe6cf" stroke-width="0.5" stroke-opacity="0.22"
-        style="animation: floatPanel 5.5s ease-in-out 1.6s infinite;"/>
+  <!-- Active modules (p-head / p-bar style) -->
+  <text x="742" y="250" class="fm" font-size="9" fill="#5fa89c" letter-spacing="2">ACTIVE MODULES</text>
 
-  <text x="760" y="268" class="font-mono" font-size="10" fill="#5fa89c" letter-spacing="2">JARVIS CONSOLE</text>
-  <circle cx="938" cy="264" r="3" fill="#2fe6cf" style="filter: drop-shadow(0 0 6px #2fe6cf);"/>
+  <!-- Module rows -->
+  <rect x="742" y="256" width="194" height="18" rx="2" fill="rgba(47,230,207,0.04)"
+        stroke="#2fe6cf" stroke-width="0.4" stroke-opacity="0.22"/>
+  <text x="750" y="268" class="fm" font-size="8" fill="#2fe6cf">◈  React.js / Next.js / TypeScript</text>
 
-  <line x1="750" y1="274" x2="950" y2="274" stroke="#2fe6cf" stroke-width="0.4" opacity="0.22"/>
+  <rect x="742" y="278" width="194" height="18" rx="2" fill="rgba(47,230,207,0.04)"
+        stroke="#2fe6cf" stroke-width="0.4" stroke-opacity="0.22"/>
+  <text x="750" y="290" class="fm" font-size="8" fill="#2fe6cf">◈  Node.js / Express / Python</text>
 
-  <!-- Console log lines (msgIn animation) -->
-  <text x="760" y="292" class="font-mono" font-size="8" fill="#5fa89c" style="animation: msgIn .3s ease-out;">&gt; BOOTING STARK CORE v3.0</text>
-  <text x="760" y="306" class="font-mono" font-size="8" fill="#2fe6cf" style="animation: msgIn .3s .1s ease-out both;">&gt; KERNEL LOADED ✓</text>
-  <text x="760" y="320" class="font-mono" font-size="8" fill="#2fe6cf" style="animation: msgIn .3s .2s ease-out both;">&gt; AI PIPELINE ACTIVE ✓</text>
-  <text x="760" y="334" class="font-mono" font-size="8" fill="#2fe6cf" style="animation: msgIn .3s .3s ease-out both;">&gt; LLM AGENTS ONLINE ✓</text>
-  <text x="760" y="348" class="font-mono" font-size="8" fill="#2fe6cf" style="animation: msgIn .3s .4s ease-out both;">&gt; VECTOR STORE INIT ✓</text>
-  <text x="760" y="362" class="font-mono" font-size="8" fill="#5fa89c" style="animation: msgIn .3s .5s ease-out both;">&gt; SCANNING THREATS...</text>
-  <text x="760" y="376" class="font-mono" font-size="8" fill="#00ff88" style="animation: msgIn .3s .6s ease-out both;">&gt; ALL SYSTEMS OPTIMAL ✓</text>
+  <rect x="742" y="300" width="194" height="18" rx="2" fill="rgba(47,230,207,0.04)"
+        stroke="#2fe6cf" stroke-width="0.4" stroke-opacity="0.22"/>
+  <text x="750" y="312" class="fm" font-size="8" fill="#2fe6cf">◈  Flask / FastAPI / REST APIs</text>
 
-  <line x1="750" y1="384" x2="950" y2="384" stroke="#2fe6cf" stroke-width="0.3" opacity="0.18"/>
+  <rect x="742" y="322" width="194" height="18" rx="2" fill="rgba(47,230,207,0.04)"
+        stroke="#2fe6cf" stroke-width="0.4" stroke-opacity="0.22"/>
+  <text x="750" y="334" class="fm" font-size="8" fill="#ffb347">◈  TensorFlow / OpenCV / scikit</text>
 
-  <!-- Stark / JARVIS dialogue (chat-msg style) -->
-  <text x="760" y="400" class="font-mono" font-size="8" fill="#2fe6cf" letter-spacing="1">YOU</text>
-  <text x="900" y="400" text-anchor="end" class="font-mono" font-size="8" fill="#5fa89c">18:00</text>
-  <text x="760" y="414" class="font-mono" font-size="8" fill="#dffbf6">"Build me the best</text>
-  <text x="760" y="426" class="font-mono" font-size="8" fill="#dffbf6"> AI system possible."</text>
+  <rect x="742" y="344" width="194" height="18" rx="2" fill="rgba(47,230,207,0.04)"
+        stroke="#2fe6cf" stroke-width="0.4" stroke-opacity="0.22"/>
+  <text x="750" y="356" class="fm" font-size="8" fill="#ffb347">◈  LLM Agents / RAG / Tool Calls</text>
 
-  <text x="760" y="444" class="font-mono" font-size="8" fill="#00ff88" letter-spacing="1">JARVIS</text>
-  <text x="900" y="444" text-anchor="end" class="font-mono" font-size="8" fill="#5fa89c">18:00</text>
-  <text x="760" y="458" class="font-mono" font-size="8" fill="#dffbf6">"Already done, Sir."</text>
+  <rect x="742" y="366" width="194" height="18" rx="2" fill="rgba(47,230,207,0.04)"
+        stroke="#2fe6cf" stroke-width="0.4" stroke-opacity="0.22"/>
+  <text x="750" y="378" class="fm" font-size="8" fill="#2fe6cf">◈  MongoDB / MySQL / Vector DB</text>
+
+  <line x1="730" y1="390" x2="950" y2="390" stroke="#2fe6cf" stroke-width="0.3" opacity="0.18"/>
+
+  <!-- Progress bars (p-bar style from style.css) -->
+  <text x="742" y="406" class="fm" font-size="8" fill="#5fa89c" letter-spacing="2">CORE PERFORMANCE</text>
+
+  <text x="742" y="422" class="fm" font-size="7.5" fill="#5fa89c">NEURAL LINK</text>
+  <rect x="742" y="426" width="194" height="4" rx="2" fill="rgba(255,255,255,0.07)"/>
+  <rect x="742" y="426" rx="2" height="4" fill="#2fe6cf"
+        style="filter:drop-shadow(0 0 4px #2fe6cf);">
+    <animate attributeName="width" from="0" to="176" dur="1.8s" fill="freeze"/>
+  </rect>
+
+  <text x="742" y="442" class="fm" font-size="7.5" fill="#5fa89c">COMPILE POWER</text>
+  <rect x="742" y="446" width="194" height="4" rx="2" fill="rgba(255,255,255,0.07)"/>
+  <rect x="742" y="446" rx="2" height="4" fill="#2fe6cf"
+        style="filter:drop-shadow(0 0 4px #2fe6cf);">
+    <animate attributeName="width" from="0" to="184" dur="2.2s" fill="freeze"/>
+  </rect>
+
+  <text x="742" y="462" class="fm" font-size="7.5" fill="#5fa89c">AI INFERENCE</text>
+  <rect x="742" y="466" width="194" height="4" rx="2" fill="rgba(255,255,255,0.07)"/>
+  <rect x="742" y="466" rx="2" height="4" fill="#ffb347"
+        style="filter:drop-shadow(0 0 4px rgba(255,179,71,0.4));">
+    <animate attributeName="width" from="0" to="160" dur="2.6s" fill="freeze"/>
+  </rect>
+
+  <line x1="730" y1="478" x2="950" y2="478" stroke="#2fe6cf" stroke-width="0.3" opacity="0.18"/>
+
+  <!-- Chat dialogue (exact chat-msg style from style.css) -->
+  <text x="742" y="494" class="fm" font-size="8" fill="#2fe6cf" letter-spacing="1">YOU</text>
+  <text x="938" y="494" text-anchor="end" class="fm" font-size="8" fill="#5fa89c">NOW</text>
+  <text x="742" y="508" class="fm" font-size="8" fill="#dffbf6">"Build me the best AI system."</text>
+  <text x="742" y="524" class="fm" font-size="8" fill="#00ff88" letter-spacing="1">JARVIS</text>
+  <text x="742" y="538" class="fm" font-size="8" fill="#dffbf6">"Already done, Sir."</text>
 
   <!-- Blinking cursor -->
-  <text x="760" y="476" class="font-mono" font-size="9" fill="#2fe6cf">stark@core:~$</text>
-  <rect x="852" y="466" width="7" height="10" fill="#2fe6cf"
-        style="animation: cursorBlink 1.2s step-start infinite;"/>
+  <text x="742" y="554" class="fm" font-size="8.5" fill="#2fe6cf">stark@core:~$</text>
+  <rect x="833" y="544" width="7" height="10" fill="#2fe6cf"
+        style="animation:blink 1.2s step-start infinite;"/>
 
-  <!-- ══ BOTTOM EDGE ══ -->
-  <rect x="0" y="533" width="960" height="7" fill="#020705"/>
-  <line x1="0" y1="533" x2="960" y2="533" stroke="#2fe6cf" stroke-width="0.5" opacity="0.22"/>
-  <text x="14" y="539" class="font-mono" font-size="6" fill="#5fa89c" letter-spacing="1">
-    STARK INDUSTRIES AI DIVISION // JARVIS ARCHITECTURE v3.0 // CHENNAI, INDIA
-  </text>
-  <text x="780" y="539" class="font-mono" font-size="6" fill="#5fa89c" letter-spacing="1">SECURE // CLASSIFIED</text>
+  <!-- ═══ BOTTOM EDGE ═══ -->
+  <rect x="0" y="553" width="960" height="7" fill="#020705"/>
+  <line x1="0" y1="553" x2="960" y2="553" stroke="#2fe6cf" stroke-width="0.4" opacity="0.22"/>
+  <text x="14" y="559" class="fm" font-size="6.5" fill="#5fa89c" letter-spacing="0.5">STARK INDUSTRIES // AI DIVISION // CHENNAI 13.08°N 80.27°E</text>
+  <text x="800" y="559" class="fm" font-size="6.5" fill="#5fa89c">SECURE // CLASSIFIED</text>
 </svg>

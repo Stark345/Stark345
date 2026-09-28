@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 24" width="100%" height="24">
+  <rect width="960" height="24" fill="#020705"/>
+  <!-- Left line -->
+  <line x1="0" y1="12" x2="420" y2="12" stroke="#2fe6cf" stroke-width="0.5" opacity="0.3"/>
+  <!-- Left gradient fade -->
+  <defs>
+    <linearGradient id="fadeL" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%"   stop-color="#2fe6cf" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#2fe6cf" stop-opacity="0.4"/>
+    </linearGradient>
+    <linearGradient id="fadeR" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%"   stop-color="#2fe6cf" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="#2fe6cf" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <line x1="0" y1="12" x2="420" y2="12" stroke="url(#fadeL)" stroke-width="0.8"/>
+  <!-- Center node -->
+  <circle cx="480" cy="12" r="4.5" fill="none" stroke="#2fe6cf" stroke-width="0.8" opacity="0.7"/>
+  <circle cx="480" cy="12" r="2" fill="#2fe6cf" opacity="0.6"/>
+  <!-- Right line -->
+  <line x1="540" y1="12" x2="960" y2="12" stroke="url(#fadeR)" stroke-width="0.8"/>
+  <!-- Small tick marks -->
+  <line x1="440" y1="9" x2="440" y2="15" stroke="#2fe6cf" stroke-width="0.5" opacity="0.3"/>
+  <line x1="460" y1="10" x2="460" y2="14" stroke="#2fe6cf" stroke-width="0.5" opacity="0.2"/>
+  <line x1="500" y1="10" x2="500" y2="14" stroke="#2fe6cf" stroke-width="0.5" opacity="0.2"/>
+  <line x1="520" y1="9" x2="520" y2="15" stroke="#2fe6cf" stroke-width="0.5" opacity="0.3"/>
+</svg>
