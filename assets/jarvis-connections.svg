@@ -70,11 +70,16 @@
     <text x="538" y="72" text-anchor="middle" class="fm" font-size="9" fill="#2fe6cf">github.com/Stark345</text>
   </a>
 
-  <!-- LINKEDIN placeholder -->
-  <rect x="634" y="42" width="140" height="38" rx="6" fill="#061a18"
-        stroke="#2fe6cf" stroke-width="0.5" stroke-opacity="0.3"/>
-  <text x="704" y="59" text-anchor="middle" class="fm" font-size="7" fill="#5fa89c" letter-spacing="2">LINKEDIN</text>
-  <text x="704" y="72" text-anchor="middle" class="fm" font-size="9" fill="#5fa89c">UPLINK PENDING</text>
+  <!-- LINKEDIN — live -->
+  <a href="https://www.linkedin.com/in/jaichandran-s-139a8b354" target="_blank">
+    <rect x="634" y="42" width="148" height="38" rx="6" fill="#061a18"
+          stroke="#2fe6cf" stroke-width="1" stroke-opacity="0.6"
+          style="animation:hov 3s ease-in-out 1.8s infinite;"/>
+    <polyline points="634,52 634,42 644,42" fill="none" stroke="#2fe6cf" stroke-width="1.5"/>
+    <polyline points="772,42 782,42 782,52" fill="none" stroke="#2fe6cf" stroke-width="1.5"/>
+    <text x="708" y="59" text-anchor="middle" class="fm" font-size="7" fill="#5fa89c" letter-spacing="2">LINKEDIN</text>
+    <text x="708" y="72" text-anchor="middle" class="fm" font-size="9" fill="#2fe6cf">jaichandran-s ↗</text>
+  </a>
 
   <!-- Right status blip -->
   <circle cx="900" cy="62" r="5" fill="#00ff88"
