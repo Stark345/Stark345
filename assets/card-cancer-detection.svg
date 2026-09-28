@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 450 190" width="100%" height="100%">
+  <defs>
+    <linearGradient id="medBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0B0E17"/>
+      <stop offset="100%" stop-color="#111827"/>
+    </linearGradient>
+    <linearGradient id="medBorder" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#10B981" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#06B6D4" stop-opacity="0.3"/>
+    </linearGradient>
+  </defs>
+
+  <rect x="2" y="2" width="446" height="186" rx="10" fill="url(#medBg)" stroke="url(#medBorder)" stroke-width="1.2"/>
+
+  <!-- Top Status Badge -->
+  <g transform="translate(18, 18)">
+    <rect x="0" y="0" width="138" height="18" rx="4" fill="#064E3B" fill-opacity="0.3" stroke="#059669" stroke-width="0.7"/>
+    <circle cx="8" cy="9" r="3" fill="#34D399"/>
+    <text x="16" y="12.5" font-family="'JetBrains Mono', monospace" font-size="8.5" font-weight="700" fill="#34D399" letter-spacing="1">BIO_VISION // DEEP ML</text>
+  </g>
+
+  <text x="390" y="32" font-size="16">🔬</text>
+
+  <!-- Title -->
+  <text x="18" y="60" font-family="'Segoe UI', sans-serif" font-size="17" font-weight="800" fill="#F8FAFC">
+    Blood Cell Cancer Screening Tool
+  </text>
+
+  <!-- Description -->
+  <text x="18" y="82" font-family="'Segoe UI', sans-serif" font-size="11.5" fill="#94A3B8">
+    Deep learning computer vision diagnostic pipeline classifying leukemia
+  </text>
+  <text x="18" y="98" font-family="'Segoe UI', sans-serif" font-size="11.5" fill="#94A3B8">
+    and lymphoma in microscopic peripheral blood smears.
+  </text>
+
+  <!-- Tech Badges -->
+  <g transform="translate(18, 118)">
+    <!-- TensorFlow -->
+    <rect x="0" y="0" width="80" height="20" rx="4" fill="#1E293B" stroke="#334155" stroke-width="0.8"/>
+    <text x="40" y="13.5" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="9" fill="#FB923C">TensorFlow</text>
+
+    <!-- OpenCV -->
+    <rect x="86" y="0" width="65" height="20" rx="4" fill="#1E293B" stroke="#334155" stroke-width="0.8"/>
+    <text x="118" y="13.5" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="9" fill="#38BDF8">OpenCV</text>
+
+    <!-- Flask -->
+    <rect x="157" y="0" width="55" height="20" rx="4" fill="#1E293B" stroke="#334155" stroke-width="0.8"/>
+    <text x="184" y="13.5" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="9" fill="#94A3B8">Flask</text>
+
+    <!-- Python -->
+    <rect x="218" y="0" width="60" height="20" rx="4" fill="#1E293B" stroke="#334155" stroke-width="0.8"/>
+    <text x="248" y="13.5" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="9" fill="#FBBF24">Python</text>
+
+    <!-- ResNet / CNN -->
+    <rect x="284" y="0" width="70" height="20" rx="4" fill="#065F46" stroke="#10B981" stroke-width="0.8"/>
+    <text x="319" y="13.5" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="9" font-weight="700" fill="#6EE7B7">CNN V2</text>
+  </g>
+
+  <!-- Footer Info Line -->
+  <line x1="18" y1="154" x2="432" y2="154" stroke="#1E293B" stroke-width="1"/>
+  <g transform="translate(18, 172)">
+    <text x="0" y="0" font-family="'JetBrains Mono', monospace" font-size="9" fill="#64748B">METRIC: </text>
+    <text x="50" y="0" font-family="'JetBrains Mono', monospace" font-size="9" font-weight="600" fill="#10B981">Real-time Microscopic Inference</text>
+    <text x="330" y="0" font-family="'JetBrains Mono', monospace" font-size="9" font-weight="600" fill="#34D399">View Repo →</text>
+  </g>
+</svg>

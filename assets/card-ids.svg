@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 450 190" width="100%" height="100%">
+  <defs>
+    <linearGradient id="idsBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#090B19"/>
+      <stop offset="100%" stop-color="#0E1222"/>
+    </linearGradient>
+    <linearGradient id="idsBorder" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#8B5CF6" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#EC4899" stop-opacity="0.3"/>
+    </linearGradient>
+  </defs>
+
+  <rect x="2" y="2" width="446" height="186" rx="10" fill="url(#idsBg)" stroke="url(#idsBorder)" stroke-width="1.2"/>
+
+  <!-- Top Status Badge -->
+  <g transform="translate(18, 18)">
+    <rect x="0" y="0" width="138" height="18" rx="4" fill="#581C87" fill-opacity="0.3" stroke="#9333EA" stroke-width="0.7"/>
+    <circle cx="8" cy="9" r="3" fill="#C084FC"/>
+    <text x="16" y="12.5" font-family="'JetBrains Mono', monospace" font-size="8.5" font-weight="700" fill="#C084FC" letter-spacing="1">CYBER_DEFENSE // IDS</text>
+  </g>
+
+  <text x="390" y="32" font-size="16">🛡️</text>
+
+  <!-- Title -->
+  <text x="18" y="60" font-family="'Segoe UI', sans-serif" font-size="17" font-weight="800" fill="#F8FAFC">
+    AI-Powered Intrusion Detection (IDS)
+  </text>
+
+  <!-- Description -->
+  <text x="18" y="82" font-family="'Segoe UI', sans-serif" font-size="11.5" fill="#94A3B8">
+    Deep neural network security framework analyzing network anomalies
+  </text>
+  <text x="18" y="98" font-family="'Segoe UI', sans-serif" font-size="11.5" fill="#94A3B8">
+    with Transformer architectures, SHAP &amp; LIME interpretability.
+  </text>
+
+  <!-- Tech Badges -->
+  <g transform="translate(18, 118)">
+    <!-- CNN + LSTM -->
+    <rect x="0" y="0" width="76" height="20" rx="4" fill="#1E293B" stroke="#334155" stroke-width="0.8"/>
+    <text x="38" y="13.5" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="9" fill="#A855F7">CNN+LSTM</text>
+
+    <!-- Transformer -->
+    <rect x="82" y="0" width="82" height="20" rx="4" fill="#1E293B" stroke="#334155" stroke-width="0.8"/>
+    <text x="123" y="13.5" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="9" fill="#38BDF8">Transformer</text>
+
+    <!-- Autoencoder -->
+    <rect x="170" y="0" width="84" height="20" rx="4" fill="#1E293B" stroke="#334155" stroke-width="0.8"/>
+    <text x="212" y="13.5" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="9" fill="#34D399">Autoencoder</text>
+
+    <!-- SHAP / LIME -->
+    <rect x="260" y="0" width="84" height="20" rx="4" fill="#3B0764" stroke="#A855F7" stroke-width="0.8"/>
+    <text x="302" y="13.5" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="9" font-weight="700" fill="#F472B6">SHAP / LIME</text>
+  </g>
+
+  <!-- Footer Info Line -->
+  <line x1="18" y1="154" x2="432" y2="154" stroke="#1E293B" stroke-width="1"/>
+  <g transform="translate(18, 172)">
+    <text x="0" y="0" font-family="'JetBrains Mono', monospace" font-size="9" fill="#64748B">METRIC: </text>
+    <text x="50" y="0" font-family="'JetBrains Mono', monospace" font-size="9" font-weight="600" fill="#34D399">99.4% Detection Accuracy (XAI)</text>
+    <text x="330" y="0" font-family="'JetBrains Mono', monospace" font-size="9" font-weight="600" fill="#A855F7">View Repo →</text>
+  </g>
+</svg>

@@ -1,0 +1,10 @@
+# System / OS
+.DS_Store
+Thumbs.db
+*.bak
+*.tmp
+
+# Python artifacts
+__pycache__/
+*.pyc
+generate_portrait_gif.py

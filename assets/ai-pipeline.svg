@@ -1,0 +1,191 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 950 170" width="100%" height="100%">
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="pipeBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#080C14"/>
+      <stop offset="100%" stop-color="#0A0F1D"/>
+    </linearGradient>
+
+    <!-- Node Gradient -->
+    <linearGradient id="nodeGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#1E293B"/>
+      <stop offset="100%" stop-color="#0F172A"/>
+    </linearGradient>
+
+    <linearGradient id="agentNodeGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#312E81"/>
+      <stop offset="100%" stop-color="#1E1B4B"/>
+    </linearGradient>
+
+    <!-- Glowing Filters -->
+    <filter id="packetGlow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="2.5" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <filter id="agentGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <style>
+    @keyframes movePacket1 {
+      0% { transform: translateX(65px); opacity: 0; }
+      15% { opacity: 1; }
+      85% { opacity: 1; }
+      100% { transform: translateX(870px); opacity: 0; }
+    }
+    @keyframes movePacket2 {
+      0% { transform: translateX(65px); opacity: 0; }
+      15% { opacity: 1; }
+      85% { opacity: 1; }
+      100% { transform: translateX(870px); opacity: 0; }
+    }
+    @keyframes returnPacket {
+      0% { transform: translateX(870px); opacity: 0; }
+      15% { opacity: 1; }
+      85% { opacity: 1; }
+      100% { transform: translateX(65px); opacity: 0; }
+    }
+    @keyframes pulseNode {
+      0%, 100% { stroke: #38BDF8; stroke-opacity: 0.4; }
+      50% { stroke: #A855F7; stroke-opacity: 0.9; }
+    }
+    @keyframes pulseAgentCore {
+      0%, 100% { filter: drop-shadow(0 0 2px #6366F1); }
+      50% { filter: drop-shadow(0 0 8px #A855F7); }
+    }
+    .packet-forward {
+      animation: movePacket1 4s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+    }
+    .packet-forward-delayed {
+      animation: movePacket2 4s cubic-bezier(0.4, 0, 0.2, 1) infinite 2s;
+    }
+    .packet-backward {
+      animation: returnPacket 4s cubic-bezier(0.4, 0, 0.2, 1) infinite 1s;
+    }
+    .node-border {
+      animation: pulseNode 3s ease-in-out infinite;
+    }
+    .agent-card {
+      animation: pulseAgentCore 2.5s ease-in-out infinite;
+    }
+  </style>
+
+  <!-- Container -->
+  <rect x="2" y="2" width="946" height="166" rx="12" fill="url(#pipeBg)" stroke="#1E293B" stroke-width="1.2"/>
+
+  <!-- Top Title Bar -->
+  <g transform="translate(24, 18)">
+    <circle cx="4" cy="4" r="3" fill="#38BDF8"/>
+    <text x="14" y="7" font-family="'JetBrains Mono', 'Fira Code', monospace" font-size="10.5" font-weight="700" fill="#38BDF8" letter-spacing="1.5">
+      AI.SYSTEM.PIPELINE // AUTONOMOUS AGENT &amp; RAG EXECUTION RUNTIME
+    </text>
+    <text x="740" y="7" font-family="'JetBrains Mono', monospace" font-size="9.5" fill="#64748B">LATENCY: &lt;140ms (STREAMING)</text>
+  </g>
+
+  <line x1="20" y1="32" x2="930" y2="32" stroke="#1E293B" stroke-width="1"/>
+
+  <!-- Main Pipeline Connecting Bus Lines -->
+  <!-- Forward Line (Top) -->
+  <line x1="65" y1="84" x2="880" y2="84" stroke="#1E293B" stroke-width="2"/>
+  <line x1="65" y1="84" x2="880" y2="84" stroke="#0284C7" stroke-width="1" stroke-dasharray="4 8" stroke-opacity="0.4"/>
+
+  <!-- Return Line (Bottom) -->
+  <line x1="880" y1="116" x2="65" y2="116" stroke="#1E293B" stroke-width="1.5"/>
+  <line x1="880" y1="116" x2="65" y2="116" stroke="#7C3AED" stroke-width="1" stroke-dasharray="3 7" stroke-opacity="0.3"/>
+
+  <!-- Animated Data Packets (Forward: Cyan) -->
+  <circle cx="0" cy="84" r="4.5" fill="#38BDF8" filter="url(#packetGlow)" class="packet-forward"/>
+  <circle cx="0" cy="84" r="3" fill="#FFFFFF" class="packet-forward"/>
+  
+  <circle cx="0" cy="84" r="4.5" fill="#22D3EE" filter="url(#packetGlow)" class="packet-forward-delayed"/>
+  <circle cx="0" cy="84" r="3" fill="#FFFFFF" class="packet-forward-delayed"/>
+
+  <!-- Animated Return Data Packets (Backward: Violet Stream) -->
+  <circle cx="0" cy="116" r="4" fill="#C084FC" filter="url(#packetGlow)" class="packet-backward"/>
+  <circle cx="0" cy="116" r="2.5" fill="#FFFFFF" class="packet-backward"/>
+
+  <!-- PIPELINE STAGES (8 Nodes) -->
+
+  <!-- 1. USER -->
+  <g transform="translate(30, 60)">
+    <rect x="0" y="0" width="80" height="74" rx="8" fill="url(#nodeGrad)" stroke="#334155" stroke-width="1"/>
+    <text x="40" y="24" text-anchor="middle" font-size="16">👤</text>
+    <text x="40" y="44" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="700" fill="#F1F5F9">USER</text>
+    <text x="40" y="58" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="7.5" fill="#94A3B8">PROMPT IN</text>
+  </g>
+
+  <!-- 2. REACT UI -->
+  <g transform="translate(142, 60)">
+    <rect x="0" y="0" width="88" height="74" rx="8" fill="url(#nodeGrad)" stroke="#0284C7" stroke-width="1"/>
+    <text x="44" y="24" text-anchor="middle" font-size="16">⚛️</text>
+    <text x="44" y="44" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="9.5" font-weight="700" fill="#38BDF8">REACT UI</text>
+    <text x="44" y="58" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="7.5" fill="#94A3B8">STATE &amp; CLIENT</text>
+  </g>
+
+  <!-- 3. API GATEWAY -->
+  <g transform="translate(262, 60)">
+    <rect x="0" y="0" width="88" height="74" rx="8" fill="url(#nodeGrad)" stroke="#334155" stroke-width="1"/>
+    <text x="44" y="24" text-anchor="middle" font-size="16">⚡</text>
+    <text x="44" y="44" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="9.5" font-weight="700" fill="#E2E8F0">API GATE</text>
+    <text x="44" y="58" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="7.5" fill="#94A3B8">REST / WS</text>
+  </g>
+
+  <!-- 4. NODE / EXPRESS -->
+  <g transform="translate(382, 60)">
+    <rect x="0" y="0" width="94" height="74" rx="8" fill="url(#nodeGrad)" stroke="#10B981" stroke-width="1"/>
+    <text x="47" y="24" text-anchor="middle" font-size="16">🟢</text>
+    <text x="47" y="44" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="9.5" font-weight="700" fill="#34D399">NODE / EXP</text>
+    <text x="47" y="58" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="7.5" fill="#94A3B8">AUTH &amp; ORCH</text>
+  </g>
+
+  <!-- 5. AI AGENT (LLM) - HIGHLIGHTED -->
+  <g transform="translate(508, 54)" class="agent-card">
+    <rect x="0" y="0" width="108" height="84" rx="10" fill="url(#agentNodeGrad)" stroke="#818CF8" stroke-width="1.8"/>
+    <circle cx="54" cy="22" r="14" fill="#4338CA" filter="url(#agentGlow)"/>
+    <text x="54" y="27" text-anchor="middle" font-size="14">🧠</text>
+    <text x="54" y="50" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="10.5" font-weight="800" fill="#A5B4FC">AI AGENT</text>
+    <text x="54" y="64" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="8" font-weight="700" fill="#38BDF8">LLM REASONER</text>
+    <text x="54" y="75" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="7" fill="#C7D2FE">COT &amp; DECISION</text>
+  </g>
+
+  <!-- 6. TOOL CALLING -->
+  <g transform="translate(648, 60)">
+    <rect x="0" y="0" width="90" height="74" rx="8" fill="url(#nodeGrad)" stroke="#F59E0B" stroke-width="1"/>
+    <text x="45" y="24" text-anchor="middle" font-size="16">🛠️</text>
+    <text x="45" y="44" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="9.5" font-weight="700" fill="#FBBF24">TOOL CALL</text>
+    <text x="45" y="58" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="7.5" fill="#94A3B8">EXEC &amp; PARSE</text>
+  </g>
+
+  <!-- 7. DATABASE & VECTORS -->
+  <g transform="translate(770, 60)">
+    <rect x="0" y="0" width="90" height="74" rx="8" fill="url(#nodeGrad)" stroke="#8B5CF6" stroke-width="1"/>
+    <text x="45" y="24" text-anchor="middle" font-size="16">🗄️</text>
+    <text x="45" y="44" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="9.5" font-weight="700" fill="#C084FC">VECTOR/DB</text>
+    <text x="45" y="58" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="7.5" fill="#94A3B8">RAG &amp; PERSIST</text>
+  </g>
+
+  <!-- 8. STREAMED RESPONSE -->
+  <g transform="translate(876, 68)">
+    <circle cx="20" cy="20" r="16" fill="#065F46" stroke="#34D399" stroke-width="1.2"/>
+    <text x="20" y="24" text-anchor="middle" font-size="12">✨</text>
+    <text x="20" y="48" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="8" font-weight="700" fill="#34D399">STREAM</text>
+  </g>
+
+  <!-- Arrowheads -->
+  <polygon points="138,84 132,80 132,88" fill="#38BDF8"/>
+  <polygon points="258,84 252,80 252,88" fill="#38BDF8"/>
+  <polygon points="378,84 372,80 372,88" fill="#38BDF8"/>
+  <polygon points="504,84 498,80 498,88" fill="#818CF8"/>
+  <polygon points="644,84 638,80 638,88" fill="#818CF8"/>
+  <polygon points="766,84 760,80 760,88" fill="#C084FC"/>
+  <polygon points="872,84 866,80 866,88" fill="#34D399"/>
+</svg>
