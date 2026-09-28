@@ -1,0 +1,113 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 540 360" width="100%" height="100%">
+  <defs>
+    <linearGradient id="jarvisBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#040814"/>
+      <stop offset="100%" stop-color="#071026"/>
+    </linearGradient>
+    <linearGradient id="cyanLine" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00F0FF"/>
+      <stop offset="100%" stop-color="#0284C7"/>
+    </linearGradient>
+  </defs>
+
+  <style>
+    @keyframes blinkCursor { 0%, 49% { opacity: 1; } 50%, 100% { opacity: 0; } }
+    @keyframes pulseCyan { 0%, 100% { fill: #00F0FF; } 50% { fill: #38BDF8; filter: drop-shadow(0 0 4px #00F0FF); } }
+    .cursor-box { animation: blinkCursor 0.9s infinite; }
+    .status-dot { animation: pulseCyan 2s infinite; }
+  </style>
+
+  <!-- Container -->
+  <rect x="2" y="2" width="536" height="356" rx="8" fill="url(#jarvisBg)" stroke="#0E2A47" stroke-width="1.2"/>
+
+  <!-- Top System Header Bar -->
+  <rect x="2" y="2" width="536" height="30" rx="8" fill="#061224" stroke="#0E2A47" stroke-width="0.8"/>
+  <circle cx="16" cy="15" r="4" class="status-dot"/>
+  <text x="28" y="19" font-family="'JetBrains Mono', 'Fira Code', monospace" font-size="11" font-weight="700" fill="#00F0FF" letter-spacing="1">SYSTEM.INFO // IDENTITY_SPEC</text>
+  
+  <rect x="390" y="6" width="138" height="18" rx="4" fill="#022C43" stroke="#00F0FF" stroke-width="0.7"/>
+  <text x="459" y="18.5" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="8.5" font-weight="700" fill="#00F0FF">SYS: STARK_ONLINE</text>
+
+  <!-- Key-Value Specifications -->
+  <g transform="translate(20, 52)">
+
+    <g transform="translate(0, 0)">
+      <text x="0" y="12" font-family="'JetBrains Mono', monospace" font-size="10.5" fill="#38BDF8">Subject .......</text>
+      <text x="140" y="12" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="700" fill="#FFFFFF">S. JAICHANDRAN</text>
+    </g>
+
+    <g transform="translate(0, 22)">
+      <text x="0" y="12" font-family="'JetBrains Mono', monospace" font-size="10.5" fill="#38BDF8">Role ..........</text>
+      <text x="140" y="12" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="600" fill="#00F0FF">AI-Integrated Full Stack Dev</text>
+    </g>
+
+    <g transform="translate(0, 44)">
+      <text x="0" y="12" font-family="'JetBrains Mono', monospace" font-size="10.5" fill="#38BDF8">Origin ........</text>
+      <text x="140" y="12" font-family="'JetBrains Mono', monospace" font-size="11" fill="#E2E8F0">Chennai, India</text>
+    </g>
+
+    <g transform="translate(0, 66)">
+      <text x="0" y="12" font-family="'JetBrains Mono', monospace" font-size="10.5" fill="#38BDF8">Education .....</text>
+      <text x="140" y="12" font-family="'JetBrains Mono', monospace" font-size="11" fill="#E2E8F0">B.Tech Information Technology</text>
+    </g>
+
+    <g transform="translate(0, 88)">
+      <text x="0" y="12" font-family="'JetBrains Mono', monospace" font-size="10.5" fill="#38BDF8">Status ........</text>
+      <text x="140" y="12" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="700" fill="#10B981">Available for Opportunities</text>
+    </g>
+
+    <g transform="translate(0, 110)">
+      <text x="0" y="12" font-family="'JetBrains Mono', monospace" font-size="10.5" fill="#38BDF8">ToolChain .....</text>
+      <text x="140" y="12" font-family="'JetBrains Mono', monospace" font-size="11" fill="#38BDF8">MERN + Agentic AI Workflows</text>
+    </g>
+
+    <g transform="translate(0, 132)">
+      <text x="0" y="12" font-family="'JetBrains Mono', monospace" font-size="10.5" fill="#38BDF8">Core.Lang .....</text>
+      <text x="140" y="12" font-family="'JetBrains Mono', monospace" font-size="11" fill="#FBBF24">Python • Java • TypeScript • C</text>
+    </g>
+
+    <g transform="translate(0, 154)">
+      <text x="0" y="12" font-family="'JetBrains Mono', monospace" font-size="10.5" fill="#38BDF8">Core.Front ....</text>
+      <text x="140" y="12" font-family="'JetBrains Mono', monospace" font-size="11" fill="#00F0FF">React.js • Next.js • Tailwind CSS</text>
+    </g>
+
+    <g transform="translate(0, 176)">
+      <text x="0" y="12" font-family="'JetBrains Mono', monospace" font-size="10.5" fill="#38BDF8">Core.Backe ....</text>
+      <text x="140" y="12" font-family="'JetBrains Mono', monospace" font-size="11" fill="#34D399">Node.js • Express.js • Flask</text>
+    </g>
+
+    <g transform="translate(0, 198)">
+      <text x="0" y="12" font-family="'JetBrains Mono', monospace" font-size="10.5" fill="#38BDF8">Core.Datab ....</text>
+      <text x="140" y="12" font-family="'JetBrains Mono', monospace" font-size="11" fill="#E2E8F0">MongoDB • MySQL • SQLite • Redis</text>
+    </g>
+
+    <g transform="translate(0, 220)">
+      <text x="0" y="12" font-family="'JetBrains Mono', monospace" font-size="10.5" fill="#38BDF8">Core.Infra ....</text>
+      <text x="140" y="12" font-family="'JetBrains Mono', monospace" font-size="11" fill="#60A5FA">Netlify CI/CD • Docker • Git</text>
+    </g>
+
+    <!-- Contacts section -->
+    <g transform="translate(0, 246)">
+      <text x="0" y="12" font-family="'JetBrains Mono', monospace" font-size="10.5" font-weight="700" fill="#00F0FF">- Transmission Channels:</text>
+      <text x="0" y="30" font-family="'JetBrains Mono', monospace" font-size="10" fill="#64748B">
+        Grid.Mail: <tspan fill="#38BDF8">jaichandran20871@gmail.com</tspan>
+      </text>
+      <text x="240" y="30" font-family="'JetBrains Mono', monospace" font-size="10" fill="#64748B">
+        Grid.Portf: <tspan fill="#00F0FF">XYZ.DEV</tspan>
+      </text>
+      <text x="350" y="30" font-family="'JetBrains Mono', monospace" font-size="10" fill="#64748B">
+        Grid.GitHu: <tspan fill="#F1F5F9">Stark345</tspan>
+      </text>
+    </g>
+
+  </g>
+
+  <!-- Bottom Console Status Prompt -->
+  <g transform="translate(20, 330)">
+    <line x1="0" y1="0" x2="500" y2="0" stroke="#0E2A47" stroke-width="0.8"/>
+    <text x="0" y="16" font-family="'JetBrains Mono', monospace" font-size="10" fill="#64748B">
+      <tspan fill="#00F0FF">stark@jarvis-os</tspan>:<tspan fill="#38BDF8">~</tspan>$ ./ready_for_hire.sh --agentic-core
+    </text>
+    <rect x="390" y="6" width="6" height="12" fill="#00F0FF" class="cursor-box"/>
+  </g>
+</svg>

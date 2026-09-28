@@ -1,0 +1,283 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 950 560" width="100%" height="100%">
+  <defs>
+    <linearGradient id="cardBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#050A18"/>
+      <stop offset="100%" stop-color="#081024"/>
+    </linearGradient>
+    <linearGradient id="cyanRing" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00F0FF"/>
+      <stop offset="100%" stop-color="#0284C7"/>
+    </linearGradient>
+    <linearGradient id="purpleRing" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#A855F7"/>
+      <stop offset="100%" stop-color="#6366F1"/>
+    </linearGradient>
+    <linearGradient id="greenRing" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#10B981"/>
+      <stop offset="100%" stop-color="#06B6D4"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Top Terminal Command: S.LIST ./projects.sh --all (as in Image 6, 7, 8) -->
+  <g transform="translate(10, 22)">
+    <text x="0" y="0" font-family="'JetBrains Mono', monospace" font-size="12" font-weight="700" fill="#00F0FF" letter-spacing="1">S.LIST</text>
+    <text x="70" y="0" font-family="'JetBrains Mono', monospace" font-size="11" fill="#64748B">./projects.sh --all --featured-ai</text>
+    <circle cx="920" cy="-4" r="3.5" fill="#10B981"/>
+  </g>
+
+  <!-- ==================== ROW 1 ==================== -->
+
+  <!-- CARD 1: LeadUnity / AI-Powered HCP CRM -->
+  <g transform="translate(10, 40)">
+    <rect x="0" y="0" width="455" height="155" rx="8" fill="url(#cardBg)" stroke="#0E2A47" stroke-width="1.2"/>
+    <text x="16" y="24" font-family="'JetBrains Mono', monospace" font-size="9" fill="#0284C7">stark345/ai-hcp-crm-</text>
+    <circle cx="435" cy="20" r="3" fill="#10B981"/>
+
+    <!-- Title & Desc -->
+    <text x="16" y="52" font-family="'Segoe UI', sans-serif" font-size="17" font-weight="800" fill="#FFFFFF">AI-Powered HCP CRM_</text>
+    <text x="16" y="72" font-family="'Segoe UI', sans-serif" font-size="11" fill="#94A3B8">Autonomous healthcare engagement platform with LLM tool calling</text>
+
+    <!-- Tech Pills -->
+    <g transform="translate(16, 92)">
+      <rect x="0" y="0" width="56" height="20" rx="10" fill="#03254C" stroke="#00F0FF" stroke-width="0.6"/>
+      <text x="28" y="13.5" text-anchor="middle" font-family="'Segoe UI', sans-serif" font-size="9" fill="#00F0FF">React</text>
+
+      <rect x="62" y="0" width="60" height="20" rx="10" fill="#1E293B" stroke="#334155" stroke-width="0.6"/>
+      <text x="92" y="13.5" text-anchor="middle" font-family="'Segoe UI', sans-serif" font-size="9" fill="#E2E8F0">Node.js</text>
+
+      <rect x="128" y="0" width="70" height="20" rx="10" fill="#1E293B" stroke="#334155" stroke-width="0.6"/>
+      <text x="163" y="13.5" text-anchor="middle" font-family="'Segoe UI', sans-serif" font-size="9" fill="#FBBF24">LLM Agent</text>
+    </g>
+
+    <!-- Language Breakdown -->
+    <g transform="translate(260, 94)">
+      <circle cx="0" cy="0" r="3" fill="#00F0FF"/>
+      <text x="8" y="3" font-family="'JetBrains Mono', monospace" font-size="8.5" fill="#94A3B8">React 85%</text>
+
+      <circle cx="0" cy="14" r="3" fill="#34D399"/>
+      <text x="8" y="17" font-family="'JetBrains Mono', monospace" font-size="8.5" fill="#94A3B8">Node 10%</text>
+
+      <circle cx="0" cy="28" r="3" fill="#FBBF24"/>
+      <text x="8" y="31" font-family="'JetBrains Mono', monospace" font-size="8.5" fill="#94A3B8">SQLite 5%</text>
+    </g>
+
+    <!-- Circular Percentage Ring: 85% -->
+    <g transform="translate(395, 105)">
+      <circle cx="0" cy="0" r="26" fill="none" stroke="#0B1B33" stroke-width="6"/>
+      <circle cx="0" cy="0" r="26" fill="none" stroke="url(#cyanRing)" stroke-width="6" stroke-dasharray="163" stroke-dashoffset="24" stroke-linecap="round" transform="rotate(-90)"/>
+      <text x="0" y="4" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="800" fill="#00F0FF">85%</text>
+    </g>
+
+    <text x="16" y="138" font-family="'JetBrains Mono', monospace" font-size="8.5" fill="#64748B">★ 2  •  updated recent</text>
+  </g>
+
+  <!-- CARD 2: REAL ARC REACTOR PROJECT CARD (Replaces One Piece as requested!) -->
+  <g transform="translate(485, 40)">
+    <rect x="0" y="0" width="455" height="155" rx="8" fill="url(#cardBg)" stroke="#00F0FF" stroke-width="1.2"/>
+    <text x="16" y="24" font-family="'JetBrains Mono', monospace" font-size="9" fill="#00F0FF">stark345/jarvis-arc-reactor_</text>
+    <circle cx="435" cy="20" r="3" fill="#00F0FF"/>
+
+    <!-- Title & Desc with Real Arc Reactor Icon -->
+    <text x="16" y="52" font-family="'Segoe UI', sans-serif" font-size="17" font-weight="800" fill="#FFFFFF">JARVIS Arc Reactor Core_</text>
+    <text x="16" y="72" font-family="'Segoe UI', sans-serif" font-size="11" fill="#94A3B8">Cyber-tech HUD telemetry &amp; autonomous agent runtime engine</text>
+
+    <!-- Tech Pills -->
+    <g transform="translate(16, 92)">
+      <rect x="0" y="0" width="60" height="20" rx="10" fill="#03254C" stroke="#00F0FF" stroke-width="0.6"/>
+      <text x="30" y="13.5" text-anchor="middle" font-family="'Segoe UI', sans-serif" font-size="9" fill="#00F0FF">JARVIS</text>
+
+      <rect x="66" y="0" width="56" height="20" rx="10" fill="#1E293B" stroke="#334155" stroke-width="0.6"/>
+      <text x="94" y="13.5" text-anchor="middle" font-family="'Segoe UI', sans-serif" font-size="9" fill="#FBBF24">Python</text>
+
+      <rect x="128" y="0" width="64" height="20" rx="10" fill="#1E293B" stroke="#334155" stroke-width="0.6"/>
+      <text x="160" y="13.5" text-anchor="middle" font-family="'Segoe UI', sans-serif" font-size="9" fill="#38BDF8">FastAPI</text>
+    </g>
+
+    <!-- Language Breakdown -->
+    <g transform="translate(260, 94)">
+      <circle cx="0" cy="0" r="3" fill="#00F0FF"/>
+      <text x="8" y="3" font-family="'JetBrains Mono', monospace" font-size="8.5" fill="#94A3B8">Python 98%</text>
+
+      <circle cx="0" cy="14" r="3" fill="#38BDF8"/>
+      <text x="8" y="17" font-family="'JetBrains Mono', monospace" font-size="8.5" fill="#94A3B8">C++ 2%</text>
+    </g>
+
+    <!-- Circular Percentage Ring: 98% (Real Arc Reactor) -->
+    <g transform="translate(395, 105)">
+      <circle cx="0" cy="0" r="26" fill="none" stroke="#0B1B33" stroke-width="6"/>
+      <circle cx="0" cy="0" r="26" fill="none" stroke="url(#cyanRing)" stroke-width="6" stroke-dasharray="163" stroke-dashoffset="4" stroke-linecap="round" transform="rotate(-90)"/>
+      <circle cx="0" cy="0" r="6" fill="#00F0FF"/>
+      <text x="0" y="4" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="800" fill="#00F0FF">98%</text>
+    </g>
+
+    <text x="16" y="138" font-family="'JetBrains Mono', monospace" font-size="8.5" fill="#00F0FF">⚡ ARC REACTOR ONLINE</text>
+  </g>
+
+  <!-- ==================== ROW 2 ==================== -->
+
+  <!-- CARD 3: AI-Powered Intrusion Detection System (IDS) -->
+  <g transform="translate(10, 210)">
+    <rect x="0" y="0" width="455" height="155" rx="8" fill="url(#cardBg)" stroke="#0E2A47" stroke-width="1.2"/>
+    <text x="16" y="24" font-family="'JetBrains Mono', monospace" font-size="9" fill="#0284C7">stark345/AI-Powered-Intrusion-Detection-System</text>
+    <circle cx="435" cy="20" r="3" fill="#10B981"/>
+
+    <!-- Title & Desc -->
+    <text x="16" y="52" font-family="'Segoe UI', sans-serif" font-size="17" font-weight="800" fill="#FFFFFF">AI Intrusion Detection System_</text>
+    <text x="16" y="72" font-family="'Segoe UI', sans-serif" font-size="11" fill="#94A3B8">Hybrid CNN + LSTM deep network security framework with XAI</text>
+
+    <!-- Tech Pills -->
+    <g transform="translate(16, 92)">
+      <rect x="0" y="0" width="75" height="20" rx="10" fill="#2E1065" stroke="#A855F7" stroke-width="0.6"/>
+      <text x="37" y="13.5" text-anchor="middle" font-family="'Segoe UI', sans-serif" font-size="9" fill="#C084FC">CNN+LSTM</text>
+
+      <rect x="81" y="0" width="80" height="20" rx="10" fill="#1E293B" stroke="#334155" stroke-width="0.6"/>
+      <text x="121" y="13.5" text-anchor="middle" font-family="'Segoe UI', sans-serif" font-size="9" fill="#38BDF8">Transformer</text>
+
+      <rect x="167" y="0" width="70" height="20" rx="10" fill="#1E293B" stroke="#334155" stroke-width="0.6"/>
+      <text x="202" y="13.5" text-anchor="middle" font-family="'Segoe UI', sans-serif" font-size="9" fill="#F472B6">SHAP/LIME</text>
+    </g>
+
+    <!-- Language Breakdown -->
+    <g transform="translate(260, 94)">
+      <circle cx="0" cy="0" r="3" fill="#A855F7"/>
+      <text x="8" y="3" font-family="'JetBrains Mono', monospace" font-size="8.5" fill="#94A3B8">Python 99%</text>
+
+      <circle cx="0" cy="14" r="3" fill="#38BDF8"/>
+      <text x="8" y="17" font-family="'JetBrains Mono', monospace" font-size="8.5" fill="#94A3B8">Jupyter 1%</text>
+    </g>
+
+    <!-- Circular Percentage Ring: 99% -->
+    <g transform="translate(395, 105)">
+      <circle cx="0" cy="0" r="26" fill="none" stroke="#0B1B33" stroke-width="6"/>
+      <circle cx="0" cy="0" r="26" fill="none" stroke="url(#purpleRing)" stroke-width="6" stroke-dasharray="163" stroke-dashoffset="2" stroke-linecap="round" transform="rotate(-90)"/>
+      <text x="0" y="4" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="800" fill="#C084FC">99%</text>
+    </g>
+
+    <text x="16" y="138" font-family="'JetBrains Mono', monospace" font-size="8.5" fill="#64748B">★ 3  •  updated recent</text>
+  </g>
+
+  <!-- CARD 4: Blood Cell Cancer Screening Tool -->
+  <g transform="translate(485, 210)">
+    <rect x="0" y="0" width="455" height="155" rx="8" fill="url(#cardBg)" stroke="#0E2A47" stroke-width="1.2"/>
+    <text x="16" y="24" font-family="'JetBrains Mono', monospace" font-size="9" fill="#0284C7">stark345/Blood-cell-image-cancer-detection</text>
+    <circle cx="435" cy="20" r="3" fill="#10B981"/>
+
+    <!-- Title & Desc -->
+    <text x="16" y="52" font-family="'Segoe UI', sans-serif" font-size="17" font-weight="800" fill="#FFFFFF">Blood Cell Cancer Detection_</text>
+    <text x="16" y="72" font-family="'Segoe UI', sans-serif" font-size="11" fill="#94A3B8">Microscopic blood smear computer vision classifier for leukemia</text>
+
+    <!-- Tech Pills -->
+    <g transform="translate(16, 92)">
+      <rect x="0" y="0" width="75" height="20" rx="10" fill="#064E3B" stroke="#10B981" stroke-width="0.6"/>
+      <text x="37" y="13.5" text-anchor="middle" font-family="'Segoe UI', sans-serif" font-size="9" fill="#34D399">TensorFlow</text>
+
+      <rect x="81" y="0" width="60" height="20" rx="10" fill="#1E293B" stroke="#334155" stroke-width="0.6"/>
+      <text x="111" y="13.5" text-anchor="middle" font-family="'Segoe UI', sans-serif" font-size="9" fill="#38BDF8">OpenCV</text>
+
+      <rect x="147" y="0" width="55" height="20" rx="10" fill="#1E293B" stroke="#334155" stroke-width="0.6"/>
+      <text x="174" y="13.5" text-anchor="middle" font-family="'Segoe UI', sans-serif" font-size="9" fill="#FBBF24">Flask</text>
+    </g>
+
+    <!-- Language Breakdown -->
+    <g transform="translate(260, 94)">
+      <circle cx="0" cy="0" r="3" fill="#10B981"/>
+      <text x="8" y="3" font-family="'JetBrains Mono', monospace" font-size="8.5" fill="#94A3B8">Python 92%</text>
+
+      <circle cx="0" cy="14" r="3" fill="#38BDF8"/>
+      <text x="8" y="17" font-family="'JetBrains Mono', monospace" font-size="8.5" fill="#94A3B8">HTML/JS 8%</text>
+    </g>
+
+    <!-- Circular Percentage Ring: 92% -->
+    <g transform="translate(395, 105)">
+      <circle cx="0" cy="0" r="26" fill="none" stroke="#0B1B33" stroke-width="6"/>
+      <circle cx="0" cy="0" r="26" fill="none" stroke="url(#greenRing)" stroke-width="6" stroke-dasharray="163" stroke-dashoffset="13" stroke-linecap="round" transform="rotate(-90)"/>
+      <text x="0" y="4" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="800" fill="#34D399">92%</text>
+    </g>
+
+    <text x="16" y="138" font-family="'JetBrains Mono', monospace" font-size="8.5" fill="#64748B">★ 2  •  updated recent</text>
+  </g>
+
+  <!-- ==================== ROW 3 ==================== -->
+
+  <!-- CARD 5: ASJ Pipe Scaffolding -->
+  <g transform="translate(10, 380)">
+    <rect x="0" y="0" width="455" height="155" rx="8" fill="url(#cardBg)" stroke="#0E2A47" stroke-width="1.2"/>
+    <text x="16" y="24" font-family="'JetBrains Mono', monospace" font-size="9" fill="#0284C7">stark345/ASJ-Pipe-Scaffolding-</text>
+    <circle cx="435" cy="20" r="3" fill="#10B981"/>
+
+    <!-- Title & Desc -->
+    <text x="16" y="52" font-family="'Segoe UI', sans-serif" font-size="17" font-weight="800" fill="#FFFFFF">ASJ Scaffolding Portal_</text>
+    <text x="16" y="72" font-family="'Segoe UI', sans-serif" font-size="11" fill="#94A3B8">Commercial engineering site with security headers &amp; SEO architecture</text>
+
+    <!-- Tech Pills -->
+    <g transform="translate(16, 92)">
+      <rect x="0" y="0" width="56" height="20" rx="10" fill="#1E293B" stroke="#334155" stroke-width="0.6"/>
+      <text x="28" y="13.5" text-anchor="middle" font-family="'Segoe UI', sans-serif" font-size="9" fill="#FB923C">HTML5</text>
+
+      <rect x="62" y="0" width="50" height="20" rx="10" fill="#1E293B" stroke="#334155" stroke-width="0.6"/>
+      <text x="87" y="13.5" text-anchor="middle" font-family="'Segoe UI', sans-serif" font-size="9" fill="#38BDF8">CSS3</text>
+
+      <rect x="118" y="0" width="70" height="20" rx="10" fill="#1E293B" stroke="#334155" stroke-width="0.6"/>
+      <text x="153" y="13.5" text-anchor="middle" font-family="'Segoe UI', sans-serif" font-size="9" fill="#FBBF24">JavaScript</text>
+    </g>
+
+    <!-- Language Breakdown -->
+    <g transform="translate(260, 94)">
+      <circle cx="0" cy="0" r="3" fill="#FB923C"/>
+      <text x="8" y="3" font-family="'JetBrains Mono', monospace" font-size="8.5" fill="#94A3B8">HTML 88%</text>
+
+      <circle cx="0" cy="14" r="3" fill="#38BDF8"/>
+      <text x="8" y="17" font-family="'JetBrains Mono', monospace" font-size="8.5" fill="#94A3B8">CSS 12%</text>
+    </g>
+
+    <!-- Circular Percentage Ring: 88% -->
+    <g transform="translate(395, 105)">
+      <circle cx="0" cy="0" r="26" fill="none" stroke="#0B1B33" stroke-width="6"/>
+      <circle cx="0" cy="0" r="26" fill="none" stroke="url(#cyanRing)" stroke-width="6" stroke-dasharray="163" stroke-dashoffset="19" stroke-linecap="round" transform="rotate(-90)"/>
+      <text x="0" y="4" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="800" fill="#00F0FF">88%</text>
+    </g>
+
+    <text x="16" y="138" font-family="'JetBrains Mono', monospace" font-size="8.5" fill="#64748B">★ 1  •  updated recent</text>
+  </g>
+
+  <!-- CARD 6: Interactive Birthday Celebration Portal -->
+  <g transform="translate(485, 380)">
+    <rect x="0" y="0" width="455" height="155" rx="8" fill="url(#cardBg)" stroke="#0E2A47" stroke-width="1.2"/>
+    <text x="16" y="24" font-family="'JetBrains Mono', monospace" font-size="9" fill="#0284C7">stark345/interactive-birthday-webpage</text>
+    <circle cx="435" cy="20" r="3" fill="#10B981"/>
+
+    <!-- Title & Desc -->
+    <text x="16" y="52" font-family="'Segoe UI', sans-serif" font-size="17" font-weight="800" fill="#FFFFFF">Interactive Web Portal_</text>
+    <text x="16" y="72" font-family="'Segoe UI', sans-serif" font-size="11" fill="#94A3B8">6-multiverse portal with HTML5 canvas particles, 3D physics &amp; audio</text>
+
+    <!-- Tech Pills -->
+    <g transform="translate(16, 92)">
+      <rect x="0" y="0" width="60" height="20" rx="10" fill="#03254C" stroke="#00F0FF" stroke-width="0.6"/>
+      <text x="30" y="13.5" text-anchor="middle" font-family="'Segoe UI', sans-serif" font-size="9" fill="#00F0FF">Canvas</text>
+
+      <rect x="66" y="0" width="56" height="20" rx="10" fill="#1E293B" stroke="#334155" stroke-width="0.6"/>
+      <text x="94" y="13.5" text-anchor="middle" font-family="'Segoe UI', sans-serif" font-size="9" fill="#FBBF24">JS ES6</text>
+
+      <rect x="128" y="0" width="60" height="20" rx="10" fill="#1E293B" stroke="#334155" stroke-width="0.6"/>
+      <text x="158" y="13.5" text-anchor="middle" font-family="'Segoe UI', sans-serif" font-size="9" fill="#00C7B7">Netlify</text>
+    </g>
+
+    <!-- Language Breakdown -->
+    <g transform="translate(260, 94)">
+      <circle cx="0" cy="0" r="3" fill="#FBBF24"/>
+      <text x="8" y="3" font-family="'JetBrains Mono', monospace" font-size="8.5" fill="#94A3B8">JS 94%</text>
+
+      <circle cx="0" cy="14" r="3" fill="#00C7B7"/>
+      <text x="8" y="17" font-family="'JetBrains Mono', monospace" font-size="8.5" fill="#94A3B8">CSS 6%</text>
+    </g>
+
+    <!-- Circular Percentage Ring: 94% -->
+    <g transform="translate(395, 105)">
+      <circle cx="0" cy="0" r="26" fill="none" stroke="#0B1B33" stroke-width="6"/>
+      <circle cx="0" cy="0" r="26" fill="none" stroke="url(#cyanRing)" stroke-width="6" stroke-dasharray="163" stroke-dashoffset="10" stroke-linecap="round" transform="rotate(-90)"/>
+      <text x="0" y="4" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="800" fill="#00F0FF">94%</text>
+    </g>
+
+    <text x="16" y="138" font-family="'JetBrains Mono', monospace" font-size="8.5" fill="#64748B">★ 2  •  updated recent</text>
+  </g>
+</svg>
