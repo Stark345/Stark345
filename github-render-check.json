@@ -1,0 +1,16 @@
+{
+  "checked_at": "2026-09-30T03:59:59.457Z",
+  "readme_sha256": "e3285669a42a506f87c14887663449631e8a75ac7c6093c757d7aa6cd4b6f6a9",
+  "http_status": 200,
+  "renderer": "https://api.github.com/markdown",
+  "mode": "gfm",
+  "counts": {
+    "pictures": 1,
+    "sources": 3,
+    "images": 18,
+    "details": 2
+  },
+  "responsive_sources_preserved": true,
+  "published_profile_checked": false,
+  "scope": "Actual GitHub Markdown API response, locally styled preview; no publication"
+}

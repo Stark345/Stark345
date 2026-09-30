@@ -1,0 +1,142 @@
+[
+  {
+    "name": "html5",
+    "url": "https://raw.githubusercontent.com/devicons/devicon/v2.17.0/icons/html5/html5-original.svg",
+    "status": "ok"
+  },
+  {
+    "name": "css3",
+    "url": "https://raw.githubusercontent.com/devicons/devicon/v2.17.0/icons/css3/css3-original.svg",
+    "status": "ok"
+  },
+  {
+    "name": "javascript",
+    "url": "https://raw.githubusercontent.com/devicons/devicon/v2.17.0/icons/javascript/javascript-original.svg",
+    "status": "ok"
+  },
+  {
+    "name": "typescript",
+    "url": "https://raw.githubusercontent.com/devicons/devicon/v2.17.0/icons/typescript/typescript-original.svg",
+    "status": "ok"
+  },
+  {
+    "name": "react",
+    "url": "https://raw.githubusercontent.com/devicons/devicon/v2.17.0/icons/react/react-original.svg",
+    "status": "ok"
+  },
+  {
+    "name": "nextjs",
+    "url": "https://raw.githubusercontent.com/devicons/devicon/v2.17.0/icons/nextjs/nextjs-original.svg",
+    "status": "ok"
+  },
+  {
+    "name": "tailwindcss",
+    "url": "https://raw.githubusercontent.com/devicons/devicon/v2.17.0/icons/tailwindcss/tailwindcss-original.svg",
+    "status": "ok"
+  },
+  {
+    "name": "bootstrap",
+    "url": "https://raw.githubusercontent.com/devicons/devicon/v2.17.0/icons/bootstrap/bootstrap-original.svg",
+    "status": "ok"
+  },
+  {
+    "name": "nodejs",
+    "url": "https://raw.githubusercontent.com/devicons/devicon/v2.17.0/icons/nodejs/nodejs-original.svg",
+    "status": "ok"
+  },
+  {
+    "name": "express",
+    "url": "https://raw.githubusercontent.com/devicons/devicon/v2.17.0/icons/express/express-original.svg",
+    "status": "ok"
+  },
+  {
+    "name": "flask",
+    "url": "https://raw.githubusercontent.com/devicons/devicon/v2.17.0/icons/flask/flask-original.svg",
+    "status": "ok"
+  },
+  {
+    "name": "java",
+    "url": "https://raw.githubusercontent.com/devicons/devicon/v2.17.0/icons/java/java-original.svg",
+    "status": "ok"
+  },
+  {
+    "name": "python",
+    "url": "https://raw.githubusercontent.com/devicons/devicon/v2.17.0/icons/python/python-original.svg",
+    "status": "ok"
+  },
+  {
+    "name": "c",
+    "url": "https://raw.githubusercontent.com/devicons/devicon/v2.17.0/icons/c/c-original.svg",
+    "status": "ok"
+  },
+  {
+    "name": "mysql",
+    "url": "https://raw.githubusercontent.com/devicons/devicon/v2.17.0/icons/mysql/mysql-original.svg",
+    "status": "ok"
+  },
+  {
+    "name": "mongodb",
+    "url": "https://raw.githubusercontent.com/devicons/devicon/v2.17.0/icons/mongodb/mongodb-original.svg",
+    "status": "ok"
+  },
+  {
+    "name": "sqlite",
+    "url": "https://raw.githubusercontent.com/devicons/devicon/v2.17.0/icons/sqlite/sqlite-original.svg",
+    "status": "ok"
+  },
+  {
+    "name": "tensorflow",
+    "url": "https://raw.githubusercontent.com/devicons/devicon/v2.17.0/icons/tensorflow/tensorflow-original.svg",
+    "status": "ok"
+  },
+  {
+    "name": "opencv",
+    "url": "https://raw.githubusercontent.com/devicons/devicon/v2.17.0/icons/opencv/opencv-original.svg",
+    "status": "ok"
+  },
+  {
+    "name": "numpy",
+    "url": "https://raw.githubusercontent.com/devicons/devicon/v2.17.0/icons/numpy/numpy-original.svg",
+    "status": "ok"
+  },
+  {
+    "name": "pandas",
+    "url": "https://raw.githubusercontent.com/devicons/devicon/v2.17.0/icons/pandas/pandas-original.svg",
+    "status": "ok"
+  },
+  {
+    "name": "scikitlearn",
+    "url": "https://raw.githubusercontent.com/devicons/devicon/v2.17.0/icons/scikitlearn/scikitlearn-original.svg",
+    "status": "ok"
+  },
+  {
+    "name": "matplotlib",
+    "url": "https://raw.githubusercontent.com/devicons/devicon/v2.17.0/icons/matplotlib/matplotlib-original.svg",
+    "status": "ok"
+  },
+  {
+    "name": "git",
+    "url": "https://raw.githubusercontent.com/devicons/devicon/v2.17.0/icons/git/git-original.svg",
+    "status": "ok"
+  },
+  {
+    "name": "github",
+    "url": "https://raw.githubusercontent.com/devicons/devicon/v2.17.0/icons/github/github-original.svg",
+    "status": "ok"
+  },
+  {
+    "name": "vscode",
+    "url": "https://raw.githubusercontent.com/devicons/devicon/v2.17.0/icons/vscode/vscode-original.svg",
+    "status": "ok"
+  },
+  {
+    "name": "postman",
+    "url": "https://raw.githubusercontent.com/devicons/devicon/v2.17.0/icons/postman/postman-original.svg",
+    "status": "ok"
+  },
+  {
+    "name": "jupyter",
+    "url": "https://raw.githubusercontent.com/devicons/devicon/v2.17.0/icons/jupyter/jupyter-original.svg",
+    "status": "ok"
+  }
+]

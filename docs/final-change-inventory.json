@@ -1,0 +1,263 @@
+{
+  "checked_at": "2026-09-30T04:08:18.317Z",
+  "repository": "E:/Stark345",
+  "head_unchanged": true,
+  "head": "fb096c24a6e7eaabb8702c1e155cb8cb4f0a8b88",
+  "backup": "C:\\Users\\ASUS\\Documents\\Codex\\2026-09-30\\files-pasted-by-the-user-complete\\work\\backup-before-install-20260930-091726",
+  "files_before": 153,
+  "files_removed": [],
+  "original_source_files_unchanged": 10,
+  "frozen_assets_unchanged": 23,
+  "changes": [
+    {
+      "path": "assets/hero-cinematic.gif",
+      "change": "modified",
+      "sha256": "8cf6c2a355a0ab0bb47b9dabe8042ae537199f5e72dee2ec4920457ae3ac0d2f"
+    },
+    {
+      "path": "assets/hero-cinematic.png",
+      "change": "modified",
+      "sha256": "193c0b4039e2e3d9e7b36ec9364e57be08b47b1b86bc7840b5889e93b0f5d860"
+    },
+    {
+      "path": "assets/hero-contact-sheet.png",
+      "change": "modified",
+      "sha256": "1630c1bd08754eeb5be4d2da38ecf8a4d8bb4aedb0216eade7856d474cf78f9a"
+    },
+    {
+      "path": "assets/hero-manifest.json",
+      "change": "modified",
+      "sha256": "1b0d27df226075095e5b9be7dc13283f5bb3573b1f4e704101cbe154143d9a09"
+    },
+    {
+      "path": "assets/hero-mobile.gif",
+      "change": "modified",
+      "sha256": "af7e7673863cce1d8283ccd8bdc8b4cd5356b7ecf308c8b79208b55d2348b236"
+    },
+    {
+      "path": "assets/hero-mobile.png",
+      "change": "modified",
+      "sha256": "e52e6741e605ec3590d83f6c50ab6ec3f63a540105e89b9eb62fdce4d2b5bd43"
+    },
+    {
+      "path": "assets/hero-review/00-jaichandran.png",
+      "change": "modified",
+      "sha256": "193c0b4039e2e3d9e7b36ec9364e57be08b47b1b86bc7840b5889e93b0f5d860"
+    },
+    {
+      "path": "assets/hero-review/01-react.png",
+      "change": "modified",
+      "sha256": "4011da456639397b08f22491c1e32208734100d1e94e916254499461a76aa715"
+    },
+    {
+      "path": "assets/hero-review/02-nodejs.png",
+      "change": "modified",
+      "sha256": "aa7291d7033dda4a6d9b21ca55d4d49cc6fce8dca91c9394d123523a8c93476d"
+    },
+    {
+      "path": "assets/hero-review/03-mysql.png",
+      "change": "added",
+      "sha256": "783b512872a3662583bfa04b2bf199122b5dca4c29440c532c9ecc874ccca152"
+    },
+    {
+      "path": "assets/hero-review/04-java.png",
+      "change": "added",
+      "sha256": "6755538025db80718b64e07d130283f175e89c3316366d29c0c9c79594523e35"
+    },
+    {
+      "path": "assets/hero-review/05-python.png",
+      "change": "added",
+      "sha256": "78f753f50cb16bb4f124c532730886986570f50d8593d3ba60a3b97e22b122ac"
+    },
+    {
+      "path": "assets/hero-right.png",
+      "change": "modified",
+      "sha256": "cc93f2a4635ea0216183cfcc97402a164954a92e758718107d81431db6ee4438"
+    },
+    {
+      "path": "assets/hero-source/gif-palettes.json",
+      "change": "added",
+      "sha256": "04ca717f8768c3c84dd398366065f30a4093bf5eec41758592a1e0bfcb482b59"
+    },
+    {
+      "path": "assets/hero-source/jaichandran-cutout.png",
+      "change": "added",
+      "sha256": "2556fdf5ecb2badee79b5d63d91ff93846afcfa1f247b2f76ef98eded2f3f06e"
+    },
+    {
+      "path": "assets/hero-source/java-clean.png",
+      "change": "added",
+      "sha256": "5289ac07389fab5fed6810ca94f7cdfc3178ff9b6723d7abad4766c2ed6f9afd"
+    },
+    {
+      "path": "assets/hero-source/mysql-clean.png",
+      "change": "added",
+      "sha256": "e955bb8023e96dd4513bb1064c80020120f52b91611668f9440579c3cb448723"
+    },
+    {
+      "path": "assets/hero-source/nodejs-clean.png",
+      "change": "added",
+      "sha256": "f1241c7f733d0cbf4179dc4391d5ba55a12b14af72d1fac895eb2777d459642f"
+    },
+    {
+      "path": "assets/hero-source/portrait-alpha.png",
+      "change": "added",
+      "sha256": "537d20dbd97b8c35babe743784141c0465a26ff526baab3728dd5169d3d9f920"
+    },
+    {
+      "path": "assets/hero-source/python-clean.png",
+      "change": "added",
+      "sha256": "2cf0d7090b13a4fb20b69fd6a3aff05b1a7f496ca3f33b5c42b1b50af041a9b2"
+    },
+    {
+      "path": "assets/hero-source/react-clean.png",
+      "change": "added",
+      "sha256": "679e250f3abff909822ec145859826fb79543115def210bd47bd04aaf834f5e9"
+    },
+    {
+      "path": "assets/jarvis-hero-console.svg",
+      "change": "modified",
+      "sha256": "64ec73590b495b2aca323bbd8f0b61a96ce9212f7488e9fd4ef62a9b62525522"
+    },
+    {
+      "path": "assets/jarvis-morph.gif",
+      "change": "modified",
+      "sha256": "67dd0e378340b3f4629b26a48e49d29757c12f5e91f2b460693bb56648814a0f"
+    },
+    {
+      "path": "assets/profile/capability-path.svg",
+      "change": "added",
+      "sha256": "44613f05c774b33780886bd4afdb822a14b7a59b686b5dcec665ddaffe7a4a2d"
+    },
+    {
+      "path": "assets/profile/hcp-workflow.svg",
+      "change": "added",
+      "sha256": "a22cb6c5090c52919b1772e0ceb2e36a96fea22716ec3ac55af00ac2c31f141c"
+    },
+    {
+      "path": "assets/profile/section-line.svg",
+      "change": "added",
+      "sha256": "0eaa1d3cd9ac43d55a08bdcfeb452b2330232381debe7ff2deee45b6722edeb8"
+    },
+    {
+      "path": "docs/browser-verification.json",
+      "change": "added",
+      "sha256": "ffc66e15fce63ea962b93ee908c23f05a59e0c02b4a4292c94b0b56e183f1578"
+    },
+    {
+      "path": "docs/CONTENT_EVIDENCE.md",
+      "change": "added",
+      "sha256": "1d5d925ca8e3f3353f98d8ed9ecc56594f094090fac39105b5023d023be479ad"
+    },
+    {
+      "path": "docs/hero-installation.json",
+      "change": "added",
+      "sha256": "77a8716fbc649ebe8d9f3775e0ade581ba1d61dead8f0ca8f659fdef8c18883b"
+    },
+    {
+      "path": "docs/public-link-checks.json",
+      "change": "added",
+      "sha256": "17b01d7a294af07565296821b614ebdd796fd5b3d7e15b226fb87e0100e4902f"
+    },
+    {
+      "path": "docs/readme-rendered.html",
+      "change": "added",
+      "sha256": "39f094b5ad5b10e9b0b189c681309a39476a0a3d947ece3e7b24769f5a1de916"
+    },
+    {
+      "path": "github-render-check.json",
+      "change": "modified",
+      "sha256": "b7084d61686cec923fbb179c0f3dafb6e5f863a561fcfcb5a7f392854c4a715c"
+    },
+    {
+      "path": "hero-verification.json",
+      "change": "added",
+      "sha256": "074e839d97b2b8471dd7a9c8298082eeec95b1eb4b3156d9b1612b4d3a5fe387"
+    },
+    {
+      "path": "preview_morph.html",
+      "change": "modified",
+      "sha256": "d20fffb62821e83b9e65efd3cbe755e8d12e2c18f35c041066df92a9f937ad4d"
+    },
+    {
+      "path": "preview_readme.html",
+      "change": "modified",
+      "sha256": "4bc064b75730b5b312e4eb200b7462279ffbb4fa815152345253f64cb8ac7808"
+    },
+    {
+      "path": "PROFILE_BUILD.md",
+      "change": "modified",
+      "sha256": "231244986abf537e0ba93ccd0af8e8ca63836ad593329a8d0b35ad2e1cd656f2"
+    },
+    {
+      "path": "profile-verification.json",
+      "change": "modified",
+      "sha256": "23be3e0036fba97c2c172f723c5a092075f106b07648391c016cbc1ff26864a8"
+    },
+    {
+      "path": "README.md",
+      "change": "modified",
+      "sha256": "e3285669a42a506f87c14887663449631e8a75ac7c6093c757d7aa6cd4b6f6a9"
+    },
+    {
+      "path": "scripts/build_hero.py",
+      "change": "modified",
+      "sha256": "2e98beda76acec0fc73b4cab21ac9e9058f2a6f56745aed5d67c145c4f64304a"
+    },
+    {
+      "path": "scripts/build_profile.py",
+      "change": "modified",
+      "sha256": "b0856373bcd648d51516056028ff106cb5396b293f1c3009d90ca8a671e53906"
+    },
+    {
+      "path": "scripts/render_preview.mjs",
+      "change": "added",
+      "sha256": "2bfac573836c6205c0cf4358983fba6d79cdf0df67aaff8a11972c7aac0f1528"
+    },
+    {
+      "path": "scripts/verify_hero.py",
+      "change": "added",
+      "sha256": "1fac1831374efb2f70d0e661dfc667bd7d51e24cd7b73e21fa1efb06f9949ed6"
+    },
+    {
+      "path": "scripts/verify_profile.py",
+      "change": "modified",
+      "sha256": "2276aa6f7dba20b727166efcb552af0fe72017189c9860ee1642df199c370cf6"
+    },
+    {
+      "path": "verification-results.json",
+      "change": "modified",
+      "sha256": "51e4d40b0078b34155ccbd5bef25f2c80f9df79e79407422428d6a7923403789"
+    }
+  ],
+  "git_status": [
+    "## main...origin/main",
+    " M README.md",
+    " M assets/hud-separator.svg",
+    " M assets/jarvis-connections.svg",
+    " M assets/jarvis-hero-console.svg",
+    " M assets/jarvis-morph.gif",
+    " M assets/jarvis-projects-db.svg",
+    " M assets/jarvis-system-info.svg",
+    "?? PROFILE_BUILD.md",
+    "?? assets/hero-cinematic.gif",
+    "?? assets/hero-cinematic.png",
+    "?? assets/hero-contact-sheet.png",
+    "?? assets/hero-manifest.json",
+    "?? assets/hero-mobile.gif",
+    "?? assets/hero-mobile.png",
+    "?? assets/hero-review/",
+    "?? assets/hero-right.png",
+    "?? assets/hero-source/",
+    "?? assets/morph_stages/",
+    "?? assets/profile/",
+    "?? docs/",
+    "?? github-render-check.json",
+    "?? hero-verification.json",
+    "?? preview_morph.html",
+    "?? preview_readme.html",
+    "?? profile-verification.json",
+    "?? scripts/",
+    "?? verification-results.json"
+  ]
+}

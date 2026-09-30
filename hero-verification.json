@@ -1,0 +1,68 @@
+{
+  "status": "passed",
+  "checked_at": "2026-09-30T04:07:35.788066+00:00",
+  "installation": "Installed from approved staging bytes; measured after lower-section changes",
+  "frozen_files_checked": 23,
+  "approved_hashes_match": true,
+  "stages": [
+    "Jaichandran",
+    "React",
+    "Node.js",
+    "MySQL",
+    "Java",
+    "Python"
+  ],
+  "loops": {
+    "hero-cinematic.gif": {
+      "size": [
+        1440,
+        560
+      ],
+      "frames": 78,
+      "duration_ms": 16600,
+      "static_region_max_drift": 0,
+      "bytes": 2564524
+    },
+    "hero-mobile.gif": {
+      "size": [
+        720,
+        1000
+      ],
+      "frames": 78,
+      "duration_ms": 16600,
+      "static_region_max_drift": 0,
+      "bytes": 2114540
+    },
+    "jarvis-morph.gif": {
+      "size": [
+        480,
+        560
+      ],
+      "frames": 78,
+      "duration_ms": 16600,
+      "static_region_max_drift": 0,
+      "bytes": 2302720
+    }
+  },
+  "original_portrait_rgb_exact": true,
+  "cutout_resolution": [
+    1145,
+    1374
+  ],
+  "raw_source_hashes_match": true,
+  "preview_references_valid": 11,
+  "published_github_profile_verified": false,
+  "browser_playback_report": "docs/browser-verification.json",
+  "source_fingerprints": {
+    "README.md": "e3285669a42a506f87c14887663449631e8a75ac7c6093c757d7aa6cd4b6f6a9",
+    "scripts/build_hero.py": "2e98beda76acec0fc73b4cab21ac9e9058f2a6f56745aed5d67c145c4f64304a",
+    "preview_morph.html": "d20fffb62821e83b9e65efd3cbe755e8d12e2c18f35c041066df92a9f937ad4d",
+    "assets/hero-cinematic.gif": "8cf6c2a355a0ab0bb47b9dabe8042ae537199f5e72dee2ec4920457ae3ac0d2f",
+    "assets/hero-mobile.gif": "af7e7673863cce1d8283ccd8bdc8b4cd5356b7ecf308c8b79208b55d2348b236",
+    "assets/hero-source/approved-portrait.png": "44599adb771b75b2accd1af816c3a8e0615ebc82e7913af12172c31feb9fddc8",
+    "assets/morph_stages/01_jaichandran.png": "b6751818a7e9dee68b3bdf2a01f9bf71b8f368615d68f81a74cd9da5b9fae114",
+    "assets/morph_stages/02_ironman.jpg": "64346bdef87ccf2879619706fbd117831acfc9198e9ffd0e20b8aa8f2122b4bd",
+    "assets/morph_stages/03_arc_reactor.png": "8d9fff875e7e08fa3af02cf72097c4f4be78a6576cb8dcc33f8a4d9467c0d719",
+    "assets/morph_stages/08_cyber_ai.png": "a26d362a780ae1a5874f9afac1e34f5a74198b7e5925b7b429e60e3afd45ac05"
+  }
+}

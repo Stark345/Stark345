@@ -1,0 +1,211 @@
+{
+  "verified_at": "2026-09-30T04:05:21.835Z",
+  "readme_sha256": "e3285669a42a506f87c14887663449631e8a75ac7c6093c757d7aa6cd4b6f6a9",
+  "evidence_notes": "docs/CONTENT_EVIDENCE.md",
+  "public_projects": [
+    {
+      "kind": "repository",
+      "url": "https://github.com/Stark345/ai-hcp-crm-",
+      "public": true,
+      "archived": false,
+      "disabled": false,
+      "pushed_at": "2026-09-27T14:57:31Z",
+      "branch": "main"
+    },
+    {
+      "kind": "repository",
+      "url": "https://github.com/Stark345/AI-Powered-Intrusion-Detection-System-Using-Hybrid-Deep-Learning-Model",
+      "public": true,
+      "archived": false,
+      "disabled": false,
+      "pushed_at": "2026-09-27T15:17:02Z",
+      "branch": "main"
+    },
+    {
+      "kind": "repository",
+      "url": "https://github.com/Stark345/Blood-cell-image-cancer-detection",
+      "public": true,
+      "archived": false,
+      "disabled": false,
+      "pushed_at": "2026-09-27T14:39:57Z",
+      "branch": "main"
+    },
+    {
+      "kind": "repository",
+      "url": "https://github.com/Stark345/ASJ-Pipe-Scaffolding-",
+      "public": true,
+      "archived": false,
+      "disabled": false,
+      "pushed_at": "2026-09-27T06:12:03Z",
+      "branch": "main"
+    },
+    {
+      "kind": "repository",
+      "url": "https://github.com/Stark345/Stark-Portfolio",
+      "public": true,
+      "archived": false,
+      "disabled": false,
+      "pushed_at": "2026-09-28T09:31:43Z",
+      "branch": "main"
+    },
+    {
+      "kind": "repository",
+      "url": "https://github.com/Stark345/ProjectPulse-",
+      "public": true,
+      "archived": false,
+      "disabled": false,
+      "pushed_at": "2026-09-26T13:39:31Z",
+      "branch": "main"
+    }
+  ],
+  "public_notebook": {
+    "status": 200,
+    "sha256": "69a759655ecd4eca10acbd2570412f142fc490c2296d00bbcec41988a4ac10a7",
+    "matches_inspected_local_notebook": true
+  },
+  "source_fingerprints": [
+    {
+      "source": "E:/hcp-crm/README.md",
+      "sha256": "d202eca37de654c5f130af4cf6ad63a93c26ed396bce56940c14861e4f7d891d"
+    },
+    {
+      "source": "E:/hcp-crm/frontend/package.json",
+      "sha256": "1e5708eee1e93238f76c3dbc74ef6c07b2deae610355434f12ad6dafcc4dd2d9"
+    },
+    {
+      "source": "E:/hcp-crm/backend-node/package.json",
+      "sha256": "df2f1fa4cdbef1e504141c4578ba8dc49329ea64f755ab6983d6ff98e7791cc4"
+    },
+    {
+      "source": "E:/hcp-crm/backend-node/src/database/connection.js",
+      "sha256": "b4a7b2ad3465a933ef94797c1c6a1365a0aaa1ff9960bfad6784e196f63ea072"
+    },
+    {
+      "source": "E:/hcp-crm/backend-python/requirements.txt",
+      "sha256": "a3c46ee3c5c176de14fa01ead8fe32dee9cebbec3a28d7962124c467d4f0dfe1"
+    },
+    {
+      "source": "E:/hcp-crm/backend-python/agents/langgraph/graph.py",
+      "sha256": "115280c4e81904a8292edb2478fd0229915e32d56444ee4f94933ac7ab2dc626"
+    },
+    {
+      "source": "E:/hcp-crm/backend-python/agents/langgraph/nodes.py",
+      "sha256": "54569fb8fbfdb76d58ebc5b3ee428481bd02c0eef6b8d570e0280a3563f6b347"
+    },
+    {
+      "source": "E:/hcp-crm/frontend/src/components/ChatInterface.jsx",
+      "sha256": "cb1c6ecb16969fe12f7eaff714a49fe95716b8f20c7e64967d13c7be00970916"
+    },
+    {
+      "source": "E:/ProjectPulse/README.md",
+      "sha256": "973daee62d0389bdb6a3b69229c77ce5d0ef5dc19bc87e132688fd8046f2ef85"
+    },
+    {
+      "source": "E:/ProjectPulse/client/package.json",
+      "sha256": "7e64d5212f4da3672d2744f8e5021f521c0c8e055b2430cdbaf96b7ecc2eb090"
+    },
+    {
+      "source": "E:/ProjectPulse/server/package.json",
+      "sha256": "09dec4728b5ef2f4b47337148f8bb165a5bea0a98052a9ab3b20509ab7fdf0a1"
+    },
+    {
+      "source": "E:/ProjectPulse/server/prisma/schema.prisma",
+      "sha256": "7c96b4682adb920f3204d2d4bb742767eca2f6f88ed1972514b246472ff5ebd0"
+    },
+    {
+      "source": "E:/ProjectPulse/server/src/websocket/socket.service.ts",
+      "sha256": "a3453c70c0331c50b3fcfccd9378bfb296661d63bb53fb43512e8a47ed99bdff"
+    },
+    {
+      "source": "E:/ProjectPulse/server/src/services/task.service.ts",
+      "sha256": "5398d848574832442746f265663d5800bdd013b044214c6965cf11240106bbd8"
+    },
+    {
+      "source": "E:/ProjectPulse/server/src/jobs/overdueScheduler.ts",
+      "sha256": "bd9386a04b1d9c8a0ec83c3f6cb0f784040ff6a8b6ef0fb70951bb2f496d4827"
+    },
+    {
+      "source": "E:/IDS/README.md",
+      "sha256": "7d47de87ed5b7cc59bd49c4b4154f1b931a74a30ccb5c0cb09bfd5b23213a57c"
+    },
+    {
+      "source": "E:/IDS/requirements.txt",
+      "sha256": "791551f4bbd3bacc46ffc3a05fa0d1668e5d6b1e79607dbc79ef9c5297ebb259"
+    },
+    {
+      "source": "E:/IDS/IDS.ipynb",
+      "sha256": "69a759655ecd4eca10acbd2570412f142fc490c2296d00bbcec41988a4ac10a7"
+    },
+    {
+      "source": "E:/IDS/train.py",
+      "sha256": "39d2ae4614c6f5acecb4b55f40aae7ad4969b37b53dc1d05365b1ed03a08171c"
+    },
+    {
+      "source": "E:/IDS/src/model.py",
+      "sha256": "bcb96d113ea4ddda976b59140150b17950c6871ecb0d23e90303dbdae861f099"
+    },
+    {
+      "source": "E:/IDS/src/preprocess.py",
+      "sha256": "3acd6b3676db15f3685c9b6dab92a2c22e0758b1bdeb15c0988d3f1057cbcaef"
+    },
+    {
+      "source": "E:/IDS/src/explain.py",
+      "sha256": "b66cce62fff3c4979d47bf851284e625ec022b6678db86b14271eee477bd6840"
+    },
+    {
+      "source": "E:/Blood Cell Cancer Screening Tool/app.py",
+      "sha256": "aedabb13ca580801635be84bea6bed2c27b697f64500d2c1a3f3db3748b3e44e"
+    },
+    {
+      "source": "E:/Blood Cell Cancer Screening Tool/requirements.txt",
+      "sha256": "03989119cc1a01f8c0688edd38121b9f7e6a0648fc8ec37cfa9d5b9e93ab63c8"
+    },
+    {
+      "source": "E:/asj-pipe-scaffolding-showcase/index.html",
+      "sha256": "dbfd3a4542a72540f972b0ecd08f89ebc79699fea276618c0c05ef7ad8bb584d"
+    },
+    {
+      "source": "E:/Stark-Portfolio-Personal/index.html",
+      "sha256": "05aa3862fab283e991abd6f5d3e5203743ceede6348c22a1a451c33d4badf24a"
+    },
+    {
+      "source": "E:/BIS-Assist/requirements.txt",
+      "sha256": "aaac10c6d35522c50209232825810a71b37c377b7315690b9f6ba297565d1152"
+    },
+    {
+      "source": "E:/BIS-Assist/backend/retrieval/bm25_retriever.py",
+      "sha256": "d0261910303ffacca6942f05c01353a226bc6976231ecca8efcac3be044180cd"
+    },
+    {
+      "source": "E:/BIS-Assist/backend/retrieval/embedding_service.py",
+      "sha256": "a483f1ceac5c7b4ce0991736d95837091d007d363d8a57cf70637a8648ff8783"
+    },
+    {
+      "source": "E:/BIS-Assist/backend/retrieval/vector_store.py",
+      "sha256": "8d5516d2fe036d6dece8a39b17a6e91f76b70b472376e6e9a9574f3b5e888465"
+    },
+    {
+      "source": "E:/BIS-Assist/backend/retrieval/hybrid_retriever.py",
+      "sha256": "135cf30827ed5374483847ac4d9a260591b85e5aee0dfbf1d38046cfada3605d"
+    },
+    {
+      "source": "https://raw.githubusercontent.com/Stark345/Stark-Portfolio/main/index.html",
+      "sha256": "fe20676e89ada8cc48b07aa05b728677b67dd3af8809d46168922991df5ab8dc"
+    }
+  ],
+  "education_basis": "User-supplied degree, institution, graduation year, CGPA and training names; no dates or completion status invented",
+  "research_results": "Saved notebook outputs inspected, not reproduced; execution-state inconsistency disclosed",
+  "omitted": [
+    "Unsupported 98% IDS accuracy",
+    "Completed CICIDS2017/Transformer/autoencoder evaluations",
+    "Publication and IEEE/IGNITE presentation claims",
+    "Protected ProjectPulse demo",
+    "Unverified voting-system repository",
+    "Production-grade or clinical validation claims"
+  ],
+  "contact_limitations": [
+    "LinkedIn HTTP 999; exact URL cross-linked from public GitHub profile",
+    "Email retained from existing README; no delivery test"
+  ],
+  "legacy_evidence": "Existing scripts/evidence JSON and section PNG files retained unchanged, not used as current verification"
+}

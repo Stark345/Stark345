@@ -1,0 +1,170 @@
+{
+  "checked_at": "2026-09-30T03:50:14.803Z",
+  "public_repositories": 8,
+  "checks": [
+    {
+      "kind": "repository",
+      "url": "https://github.com/Stark345/ai-hcp-crm-",
+      "public": true,
+      "archived": false,
+      "disabled": false,
+      "pushed_at": "2026-09-27T14:57:31Z",
+      "branch": "main"
+    },
+    {
+      "kind": "repository",
+      "url": "https://github.com/Stark345/AI-Powered-Intrusion-Detection-System-Using-Hybrid-Deep-Learning-Model",
+      "public": true,
+      "archived": false,
+      "disabled": false,
+      "pushed_at": "2026-09-27T15:17:02Z",
+      "branch": "main"
+    },
+    {
+      "kind": "repository",
+      "url": "https://github.com/Stark345/Blood-cell-image-cancer-detection",
+      "public": true,
+      "archived": false,
+      "disabled": false,
+      "pushed_at": "2026-09-27T14:39:57Z",
+      "branch": "main"
+    },
+    {
+      "kind": "repository",
+      "url": "https://github.com/Stark345/ASJ-Pipe-Scaffolding-",
+      "public": true,
+      "archived": false,
+      "disabled": false,
+      "pushed_at": "2026-09-27T06:12:03Z",
+      "branch": "main"
+    },
+    {
+      "kind": "repository",
+      "url": "https://github.com/Stark345/Stark-Portfolio",
+      "public": true,
+      "archived": false,
+      "disabled": false,
+      "pushed_at": "2026-09-28T09:31:43Z",
+      "branch": "main"
+    },
+    {
+      "kind": "repository",
+      "url": "https://github.com/Stark345/ProjectPulse-",
+      "public": true,
+      "archived": false,
+      "disabled": false,
+      "pushed_at": "2026-09-26T13:39:31Z",
+      "branch": "main"
+    },
+    {
+      "kind": "link",
+      "url": "https://asjpipescaffolding.com",
+      "status": 200,
+      "final_url": "https://asjpipescaffolding.com/",
+      "title": "Pipe Scaffolding Contractor Chennai | Lift Shaft Scaffolding | K. Arumuga Nadar & Co"
+    },
+    {
+      "kind": "link",
+      "url": "https://sjaichandran-portfolio.netlify.app/",
+      "status": 200,
+      "final_url": "https://sjaichandran-portfolio.netlify.app/",
+      "title": "S Jaichandran  — AI & Full-Stack Developer"
+    },
+    {
+      "kind": "link",
+      "url": "https://project-pulse-stark345.vercel.app",
+      "status": 200,
+      "final_url": "https://vercel.com/login?next=%2Fsso-api%3Furl%3Dhttps%253A%252F%252Fproject-pulse-stark345.vercel.app%252F%26nonce%3Dc30c0410dfdc6f791846f615a98ddbd8f462d8966c2098131034f32d7f2f6304",
+      "title": "Login – Vercel"
+    },
+    {
+      "kind": "link",
+      "url": "https://www.linkedin.com/in/jaichandran-s-139a8b354",
+      "status": 999,
+      "final_url": "https://www.linkedin.com/in/jaichandran-s-139a8b354",
+      "title": ""
+    },
+    {
+      "kind": "link",
+      "url": "https://github.com/Stark345",
+      "status": 200,
+      "final_url": "https://github.com/Stark345",
+      "title": "Stark345 (Jaichandran S) · GitHub"
+    }
+  ],
+  "readme_link_checks": {
+    "checked_at": "2026-09-30T04:05:21.195Z",
+    "links": [
+      {
+        "url": "https://github.com/Stark345/ai-hcp-crm-",
+        "status": 200,
+        "final_url": "https://github.com/Stark345/ai-hcp-crm-"
+      },
+      {
+        "url": "https://github.com/Stark345/ProjectPulse-",
+        "status": 200,
+        "final_url": "https://github.com/Stark345/ProjectPulse-"
+      },
+      {
+        "url": "https://github.com/Stark345/AI-Powered-Intrusion-Detection-System-Using-Hybrid-Deep-Learning-Model",
+        "status": 200,
+        "final_url": "https://github.com/Stark345/AI-Powered-Intrusion-Detection-System-Using-Hybrid-Deep-Learning-Model"
+      },
+      {
+        "url": "https://github.com/Stark345/Blood-cell-image-cancer-detection",
+        "status": 200,
+        "final_url": "https://github.com/Stark345/Blood-cell-image-cancer-detection"
+      },
+      {
+        "url": "https://github.com/Stark345/ASJ-Pipe-Scaffolding-",
+        "status": 200,
+        "final_url": "https://github.com/Stark345/ASJ-Pipe-Scaffolding-"
+      },
+      {
+        "url": "https://asjpipescaffolding.com",
+        "status": 200,
+        "final_url": "https://asjpipescaffolding.com/"
+      },
+      {
+        "url": "https://github.com/Stark345/Stark-Portfolio",
+        "status": 200,
+        "final_url": "https://github.com/Stark345/Stark-Portfolio"
+      },
+      {
+        "url": "https://sjaichandran-portfolio.netlify.app/",
+        "status": 200,
+        "final_url": "https://sjaichandran-portfolio.netlify.app/"
+      },
+      {
+        "url": "https://github.com/Stark345/AI-Powered-Intrusion-Detection-System-Using-Hybrid-Deep-Learning-Model/blob/main/IDS.ipynb",
+        "status": 200,
+        "final_url": "https://github.com/Stark345/AI-Powered-Intrusion-Detection-System-Using-Hybrid-Deep-Learning-Model/blob/main/IDS.ipynb"
+      },
+      {
+        "url": "https://github.com/Stark345/AI-Powered-Intrusion-Detection-System-Using-Hybrid-Deep-Learning-Model/blob/main/train.py",
+        "status": 200,
+        "final_url": "https://github.com/Stark345/AI-Powered-Intrusion-Detection-System-Using-Hybrid-Deep-Learning-Model/blob/main/train.py"
+      },
+      {
+        "url": "https://github.com/Stark345?tab=repositories",
+        "status": 200,
+        "final_url": "https://github.com/Stark345?tab=repositories"
+      },
+      {
+        "url": "https://github.com/Stark345?tab=overview",
+        "status": 200,
+        "final_url": "https://github.com/Stark345?tab=overview"
+      },
+      {
+        "url": "https://github.com/Stark345",
+        "status": 200,
+        "final_url": "https://github.com/Stark345"
+      },
+      {
+        "url": "https://www.linkedin.com/in/jaichandran-s-139a8b354",
+        "status": 999,
+        "final_url": "https://www.linkedin.com/in/jaichandran-s-139a8b354"
+      }
+    ]
+  }
+}

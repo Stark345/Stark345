@@ -1,0 +1,152 @@
+{
+  "canvas": [
+    1440,
+    560
+  ],
+  "mobile_canvas": [
+    720,
+    1000
+  ],
+  "morph_area": [
+    480,
+    560
+  ],
+  "logo_safe_area": [
+    0.74,
+    0.68
+  ],
+  "optical_scale_factors": {
+    "React": 0.81,
+    "Node.js": 0.96,
+    "MySQL": 1,
+    "Java": 1,
+    "Python": 0.72
+  },
+  "transition_ms": 600,
+  "loop_ms": 16600,
+  "frame_count": 78,
+  "stages": [
+    {
+      "name": "Jaichandran",
+      "source": "01_jaichandran.png",
+      "source_sha256": "b6751818a7e9dee68b3bdf2a01f9bf71b8f368615d68f81a74cd9da5b9fae114",
+      "hold_ms": 3000,
+      "displayed_size": [
+        417,
+        500
+      ],
+      "position": [
+        31,
+        43
+      ],
+      "cleaned_source_size": [
+        1145,
+        1374
+      ]
+    },
+    {
+      "name": "React",
+      "source": "04_react.png",
+      "source_sha256": "4566652adb84f0abbfdd4037a5737ef1ac381d5074c48ae2922450ae43b715a2",
+      "hold_ms": 2000,
+      "displayed_size": [
+        288,
+        257
+      ],
+      "position": [
+        96,
+        152
+      ],
+      "cleaned_source_size": [
+        738,
+        658
+      ]
+    },
+    {
+      "name": "Node.js",
+      "source": "05_nodejs.png",
+      "source_sha256": "9bc528573eefc9af37f59c70bec44a73a13aa6b58812454a70351a382590f780",
+      "hold_ms": 2000,
+      "displayed_size": [
+        341,
+        208
+      ],
+      "position": [
+        66,
+        189
+      ],
+      "cleaned_source_size": [
+        513,
+        313
+      ]
+    },
+    {
+      "name": "MySQL",
+      "source": "09_mysql.png",
+      "source_sha256": "d3546b9f6dea76d6ea92f9e27bb93f36446d7fbff142a5839dda7a90aa0b965f",
+      "hold_ms": 2000,
+      "displayed_size": [
+        355,
+        184
+      ],
+      "position": [
+        63,
+        173
+      ],
+      "cleaned_source_size": [
+        391,
+        203
+      ]
+    },
+    {
+      "name": "Java",
+      "source": "06_java.png",
+      "source_sha256": "26fca3e95b056eb0bf4bcb3d6852b45fb2e921d93e4fc08e29bd9d909065f7c4",
+      "hold_ms": 2000,
+      "displayed_size": [
+        355,
+        176
+      ],
+      "position": [
+        65,
+        177
+      ],
+      "cleaned_source_size": [
+        397,
+        197
+      ]
+    },
+    {
+      "name": "Python",
+      "source": "07_python.png",
+      "source_sha256": "3bedbce23a5b49d4ccae7c4724818caece9993510467b61f8d18144a737af12a",
+      "hold_ms": 2000,
+      "displayed_size": [
+        256,
+        246
+      ],
+      "position": [
+        110,
+        157
+      ],
+      "cleaned_source_size": [
+        400,
+        384
+      ]
+    }
+  ],
+  "portrait_source": "assets/morph_stages/01_jaichandran.png",
+  "portrait_original_rgb_exact": true,
+  "portrait_alpha_sha256": "537d20dbd97b8c35babe743784141c0465a26ff526baab3728dd5169d3d9f920",
+  "banner_sha256": "a8f74589f45416e14ef01569e16709b4e1e9b9f8acc0b6ee0e71a0f08b7f930e",
+  "particle_source": "silhouette edges crossing scan front",
+  "excluded_hero_assets": [
+    "02_ironman.jpg",
+    "03_arc_reactor.png",
+    "08_cyber_ai.png"
+  ],
+  "reserved_lower_section_assets": [
+    "02_ironman.jpg",
+    "03_arc_reactor.png"
+  ]
+}

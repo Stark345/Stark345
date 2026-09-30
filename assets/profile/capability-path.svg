@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 106" role="img" aria-labelledby="title desc">
+  <title id="title">Five connected areas of work</title>
+  <desc id="desc">Code, AI workflow, computer vision, security research and the web.</desc>
+  <defs><linearGradient id="path" gradientUnits="userSpaceOnUse" x1="0" y1="53" x2="1000" y2="53"><stop stop-color="#54edba"/><stop offset="1" stop-color="#6af9f1"/></linearGradient></defs>
+  <rect width="1000" height="106" rx="12" fill="#05121e"/>
+  <path d="M105 53h790" stroke="#153646"/>
+  <path d="M138 53h119m81 0h119m81 0h119m81 0h119" stroke="url(#path)" stroke-width="1.5"/>
+  <g fill="#071d29" stroke="#1c454e"><circle cx="100" cy="53" r="33"/><circle cx="300" cy="53" r="33"/><circle cx="500" cy="53" r="33"/><circle cx="700" cy="53" r="33"/><circle cx="900" cy="53" r="33"/></g>
+  <g fill="none" stroke="url(#path)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+    <path d="m87 43-10 10 10 10m26-20 10 10-10 10m-9-28-8 36"/>
+    <path d="m287 43 26 20m-26 0 26-20m-26 0h26v20h-26z"/>
+    <circle cx="287" cy="43" r="4"/><circle cx="313" cy="43" r="4"/><circle cx="287" cy="63" r="4"/><circle cx="313" cy="63" r="4"/>
+    <path d="M475 53q25-30 50 0-25 30-50 0z"/><circle cx="500" cy="53" r="8"/>
+    <path d="m700 29 20 9v17q-3 15-20 23-17-8-20-23V38zM690 53l7 7 14-16"/>
+    <circle cx="900" cy="53" r="23"/><ellipse cx="900" cy="53" rx="10" ry="23"/><path d="M877 53h46m-40-14h34m-34 28h34"/>
+  </g>
+</svg>

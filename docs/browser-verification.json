@@ -1,0 +1,248 @@
+{
+  "checked_at": "2026-09-30T04:05:19.283Z",
+  "source": "Final repository preview using GitHub API-rendered HTML; local stylesheet",
+  "published": false,
+  "layouts": [
+    {
+      "width": 1280,
+      "viewport": 1280,
+      "scrollWidth": 1280,
+      "height": 4170,
+      "hero": "http://127.0.0.1:53254/assets/hero-cinematic.png",
+      "brokenImages": [],
+      "overflow": [],
+      "anchors": [
+        {
+          "href": "#selected-projects",
+          "resolves": true
+        },
+        {
+          "href": "#technical-toolbox",
+          "resolves": true
+        },
+        {
+          "href": "#research--innovation",
+          "resolves": true
+        },
+        {
+          "href": "#lets-connect",
+          "resolves": true
+        },
+        {
+          "href": "#research--innovation",
+          "resolves": true
+        }
+      ],
+      "textLength": 5164,
+      "headingCount": 8,
+      "errors": [],
+      "details_expanded_for_complete_screenshot": true
+    },
+    {
+      "width": 320,
+      "viewport": 320,
+      "scrollWidth": 320,
+      "height": 6078,
+      "hero": "http://127.0.0.1:53254/assets/hero-mobile.png",
+      "brokenImages": [],
+      "overflow": [],
+      "anchors": [
+        {
+          "href": "#selected-projects",
+          "resolves": true
+        },
+        {
+          "href": "#technical-toolbox",
+          "resolves": true
+        },
+        {
+          "href": "#research--innovation",
+          "resolves": true
+        },
+        {
+          "href": "#lets-connect",
+          "resolves": true
+        },
+        {
+          "href": "#research--innovation",
+          "resolves": true
+        }
+      ],
+      "textLength": 5164,
+      "headingCount": 8,
+      "errors": [],
+      "details_expanded_for_complete_screenshot": true
+    },
+    {
+      "width": 390,
+      "viewport": 390,
+      "scrollWidth": 390,
+      "height": 5470,
+      "hero": "http://127.0.0.1:53254/assets/hero-mobile.png",
+      "brokenImages": [],
+      "overflow": [],
+      "anchors": [
+        {
+          "href": "#selected-projects",
+          "resolves": true
+        },
+        {
+          "href": "#technical-toolbox",
+          "resolves": true
+        },
+        {
+          "href": "#research--innovation",
+          "resolves": true
+        },
+        {
+          "href": "#lets-connect",
+          "resolves": true
+        },
+        {
+          "href": "#research--innovation",
+          "resolves": true
+        }
+      ],
+      "textLength": 5164,
+      "headingCount": 8,
+      "errors": [],
+      "details_expanded_for_complete_screenshot": true
+    },
+    {
+      "width": 430,
+      "viewport": 430,
+      "scrollWidth": 430,
+      "height": 5320,
+      "hero": "http://127.0.0.1:53254/assets/hero-mobile.png",
+      "brokenImages": [],
+      "overflow": [],
+      "anchors": [
+        {
+          "href": "#selected-projects",
+          "resolves": true
+        },
+        {
+          "href": "#technical-toolbox",
+          "resolves": true
+        },
+        {
+          "href": "#research--innovation",
+          "resolves": true
+        },
+        {
+          "href": "#lets-connect",
+          "resolves": true
+        },
+        {
+          "href": "#research--innovation",
+          "resolves": true
+        }
+      ],
+      "textLength": 5164,
+      "headingCount": 8,
+      "errors": [],
+      "details_expanded_for_complete_screenshot": true
+    }
+  ],
+  "motion": [
+    {
+      "width": 1280,
+      "currentSrc": "http://127.0.0.1:53254/assets/hero-cinematic.gif",
+      "loaded": true
+    },
+    {
+      "width": 320,
+      "currentSrc": "http://127.0.0.1:53254/assets/hero-mobile.gif",
+      "loaded": true
+    },
+    {
+      "width": 390,
+      "currentSrc": "http://127.0.0.1:53254/assets/hero-mobile.gif",
+      "loaded": true
+    },
+    {
+      "width": 430,
+      "currentSrc": "http://127.0.0.1:53254/assets/hero-mobile.gif",
+      "loaded": true
+    }
+  ],
+  "playback": [
+    {
+      "file": "hero-cinematic.gif",
+      "samples": [
+        {
+          "elapsed_ms": 1184,
+          "sha256": "99e493c8ae9ad531abe1b75a30fc6f8dffc436337994e373dbddc1d2819e03af"
+        },
+        {
+          "elapsed_ms": 4333,
+          "sha256": "af1bfd135d136f7aea2ad2c970be8f812006d54809536779076dbfe82905422b"
+        },
+        {
+          "elapsed_ms": 6926,
+          "sha256": "db2c16c62fd2f7eff35e9fa3625a36c4ab0a3d51df8d8179291345095c475932"
+        },
+        {
+          "elapsed_ms": 9540,
+          "sha256": "7c8230fc2c508fcc9b68e8308043b3500c80cb0b7423bc2be2f1af4d4ab96e05"
+        },
+        {
+          "elapsed_ms": 12139,
+          "sha256": "3d1a66b0a610a7f08d90f71f35de31ba222bfaad4c4535f9fe20ec187a1b6885"
+        },
+        {
+          "elapsed_ms": 14729,
+          "sha256": "0349df7a6f21411853cce99f8f81ad14400af8cb443c7c8f72633d4937fedee5"
+        },
+        {
+          "elapsed_ms": 17825,
+          "sha256": "99e493c8ae9ad531abe1b75a30fc6f8dffc436337994e373dbddc1d2819e03af"
+        }
+      ],
+      "unique_stages": 6,
+      "portrait_returns": true
+    },
+    {
+      "file": "hero-mobile.gif",
+      "samples": [
+        {
+          "elapsed_ms": 1338,
+          "sha256": "d24fc3ff1fd3d39ab064ab2e4d3d8fcf93a799141099602c2120b7041c5244ce"
+        },
+        {
+          "elapsed_ms": 4470,
+          "sha256": "5e3e1fe1a5ebf822de649d1d201194a39ca1357f08bc5d912777a76ce5be7f72"
+        },
+        {
+          "elapsed_ms": 7070,
+          "sha256": "1896def88dce84df7b48caee0dbd08e37fbeac635773cc284e9fce12d1329fb8"
+        },
+        {
+          "elapsed_ms": 9672,
+          "sha256": "2abd8753b7f09dc823ac301665c851edf2605571d1aaf8e5f443409ff008c8c2"
+        },
+        {
+          "elapsed_ms": 12271,
+          "sha256": "3a3b90b59b546c86eb7f94a04de6738c171ed034c43819e9053d46c2fc0f5c78"
+        },
+        {
+          "elapsed_ms": 14870,
+          "sha256": "ed846d22643240813b53dcb7690235e0687b7195b35baec42971b8f1c17dbf98"
+        },
+        {
+          "elapsed_ms": 17976,
+          "sha256": "d24fc3ff1fd3d39ab064ab2e4d3d8fcf93a799141099602c2120b7041c5244ce"
+        }
+      ],
+      "unique_stages": 6,
+      "portrait_returns": true
+    }
+  ],
+  "playback_checked_at": "2026-09-30T04:01:00.958Z",
+  "playback_reused_reason": "Only supporting SVG strokes changed; approved GIF hashes remain frozen.",
+  "light_theme": {
+    "width": 390,
+    "scrollWidth": 390
+  },
+  "passed": true
+}
